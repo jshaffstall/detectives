@@ -1,6 +1,6 @@
 ---
 title: All the categories
-layout: page
+layout: index
 order: title
 ---
 

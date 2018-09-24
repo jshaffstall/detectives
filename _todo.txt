@@ -11,5 +11,8 @@ TODO
 
 Rework templates to separate out the menu text from the h1 text
 
-Build the templates for the listing of all categories
+Build the templates for the listing of all categories and series
+
+Need some filter for returning all the series or categories, not just one.  
+Maybe a wildcard on the existing filters?
 

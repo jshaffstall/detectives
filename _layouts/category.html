@@ -5,11 +5,13 @@
 
 {% block body %}
 
+<main>
 <h1>{{ this.title }}</h1>
 <h2>{{ this.description }}</h2>
 
 {% for item in this.components[-1] | categories %}
 <h3>{{ item.title }}</h3>
 {% endfor %}
+</main>
 
 {% endblock %}

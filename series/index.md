@@ -1,6 +1,6 @@
 ---
 title: All the series
-layout: page
+layout: index
 order: title
 ---
 
