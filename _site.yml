@@ -3,7 +3,7 @@ brand: Detectives Club
 bootswatch: null # flatly, yeti, lumen,...
 navbar_inverse: false
 bootstrap: 3.3.6
-navbar_right_items: 1
+navbar_right_items: 0
 
 # Fill out your Google Analytics ID here
 # google_analytics: UA-

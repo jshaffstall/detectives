@@ -1,4 +1,4 @@
 ---
 title: Our Mysteries
-layout: page 
+layout: simple_page 
 ---
