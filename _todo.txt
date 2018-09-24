@@ -1,3 +1,14 @@
+Procedures
+----------
+
+Install Windows make and then inside Thonny window use make build and urubu serve to build and test
+
+From Git Bash, use make publish to update what's showing on Github Pages
+
+
+TODO
+----
+
 Rework templates to separate out the menu text from the h1 text
 
 Build the process_info hook so it captures meta information about mysteries
