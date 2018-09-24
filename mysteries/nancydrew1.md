@@ -2,8 +2,8 @@
 title: Nancy Drew's Deliberations
 layout: mystery 
 categories:
-    - simple
+    - short
     - narrative
-    - reading comprehension
+    - reading-comprehension
 ---
 
