@@ -15,12 +15,6 @@
         {
             "tags": "",
             "text": "",
-            "title": "Our Mysteries",
-            "url": "/detectives/mysteries.html"
-        },
-        {
-            "tags": "",
-            "text": "",
             "title": "Search",
             "url": "/detectives/search.html"
         },
@@ -41,6 +35,24 @@
             "text": "This is a placeholder for an author's manual that will detail how to get access to \nwrite mysteries for the site, and how to use the author's tools to do so.",
             "title": "Introduction",
             "url": "/detectives/manual/intro.html"
+        },
+        {
+            "tags": "",
+            "text": "",
+            "title": "All the mysteries",
+            "url": "/detectives/mysteries/index.html"
+        },
+        {
+            "tags": "",
+            "text": "",
+            "title": "Miss Marple's Meanderings",
+            "url": "/detectives/mysteries/missmarple1.html"
+        },
+        {
+            "tags": "",
+            "text": "",
+            "title": "Nancy Drew's Deliberations",
+            "url": "/detectives/mysteries/nancydrew1.html"
         }
     ]
 }
