@@ -11,11 +11,5 @@ TODO
 
 Rework templates to separate out the menu text from the h1 text
 
-Build the process_info hook so it captures meta information about mysteries
-
-Build the filters so they return mysteries that match the meta information
-
-Build the templates for category detail pages
-
 Build the templates for the listing of all categories
 
