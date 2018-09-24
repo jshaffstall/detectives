@@ -4,43 +4,43 @@
             "tags": "",
             "text": "What Is The Detective's Club? Something about the site",
             "title": "About Us",
-            "url": "/about.html"
+            "url": "/detectives/about.html"
         },
         {
             "tags": "",
             "text": "",
             "title": "Detective's Club",
-            "url": "/index.html"
+            "url": "/detectives/index.html"
         },
         {
             "tags": "",
             "text": "",
             "title": "Our Mysteries",
-            "url": "/mysteries.html"
+            "url": "/detectives/mysteries.html"
         },
         {
             "tags": "",
             "text": "",
             "title": "Search",
-            "url": "/search.html"
+            "url": "/detectives/search.html"
         },
         {
             "tags": "",
             "text": "",
             "title": "Blog",
-            "url": "/blog/index.html"
+            "url": "/detectives/blog/index.html"
         },
         {
             "tags": "",
             "text": "Introduction",
             "title": "Author's Manual",
-            "url": "/manual/index.html"
+            "url": "/detectives/manual/index.html"
         },
         {
             "tags": "",
             "text": "This is a placeholder for an author's manual that will detail how to get access to \nwrite mysteries for the site, and how to use the author's tools to do so.",
             "title": "Introduction",
-            "url": "/manual/intro.html"
+            "url": "/detectives/manual/intro.html"
         }
     ]
 }
