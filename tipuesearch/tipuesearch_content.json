@@ -26,6 +26,24 @@
         },
         {
             "tags": "",
+            "text": "",
+            "title": "Caesar Cipher",
+            "url": "/detectives/categories/caesar-cipher.html"
+        },
+        {
+            "tags": "",
+            "text": "",
+            "title": "All the categories",
+            "url": "/detectives/categories/index.html"
+        },
+        {
+            "tags": "",
+            "text": "",
+            "title": "Short",
+            "url": "/detectives/categories/short.html"
+        },
+        {
+            "tags": "",
             "text": "Introduction",
             "title": "Author's Manual",
             "url": "/detectives/manual/index.html"
