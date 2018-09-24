@@ -8,4 +8,9 @@ def process_info(info, site):
     # {% 'time travel' | categories %}
     # {% 'magic tree house' | series %}
     
-    print(info)
+    # Start with letting mysteries put category tags in, and collecting those
+    # identify mysteries by layout?  
+    
+    if 'layout' in info and info['layout'] == 'mystery':
+        print (info['title'])
+        
