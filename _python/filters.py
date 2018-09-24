@@ -5,12 +5,28 @@ def dateformat(value, format="%d-%b-%Y"):
 
 # The value passed in should be a category name
 def categories(value):
-    for category in data:
+    for category in data['categories']:
         if category == value:
-            return data[category]
+            return data['categories'][category]
+        
+    return []
+
+# The value passed in should be a series name
+# Mysteries will be returned in series order
+def series(value):
+    for series in data['series']:
+        if series == value:
+            data['series'][series].sort(key=_series_order)
+            
+            return data['series'][series]
         
     return []
 
 filters = {}
 filters['dateformat'] = dateformat
 filters['categories'] = categories
+filters['series'] = series
+
+def _series_order(item):
+    return item['series']['order']
+    

@@ -5,5 +5,8 @@ categories:
     - short
     - narrative
     - reading-comprehension
+series:
+    id: intro
+    order: 3
 ---
 

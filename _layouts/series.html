@@ -1,0 +1,15 @@
+{% extends "page.html" %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block body %}
+
+<h1>{{ this.title }}</h1>
+<h2>{{ this.description }}</h2>
+
+{% for item in this.components[-1] | series %}
+<h3>{{ item.title }}</h3>
+{% endfor %}
+
+{% endblock %}

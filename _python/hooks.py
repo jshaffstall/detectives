@@ -1,4 +1,4 @@
-data = {}
+data = {'categories': {}, 'series': {}}
 
 def process_info(info, site):
     # Use this to build up a dictionary of mappings of mysteries to
@@ -16,11 +16,22 @@ def process_info(info, site):
     global data
     
     if 'layout' in info and info['layout'] == 'mystery':
+        
+        # A mystery may have a list of categories
         if 'categories' in info:
             for category in info['categories']:
-                if category not in data:
-                    data[category] = []
+                if category not in data['categories']:
+                    data['categories'][category] = []
                     
-                data[category].append(info)
+                data['categories'][category].append(info)
                     
-        
+        # A mystery may appear as part of a series
+        #
+        # series:
+        #     id: series-id
+        #     order: numeric order of this item in series
+        if 'series' in info:
+            if info['series']['id'] not in data['series']:
+                data['series'][info['series']['id']] = []
+                
+            data['series'][info['series']['id']].append(info)

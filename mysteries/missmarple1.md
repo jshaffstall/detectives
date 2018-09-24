@@ -5,5 +5,8 @@ categories:
     - short
     - caesar-cipher
     - basic-math
+series:
+    id: intro
+    order: 2    
 ---
 
