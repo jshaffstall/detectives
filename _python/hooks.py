@@ -21,7 +21,6 @@ def process_info(info, site):
                 if category not in data:
                     data[category] = []
                     
-                if info not in data[category]:
-                    data[category].append(info.copy())
+                data[category].append(info)
                     
         
