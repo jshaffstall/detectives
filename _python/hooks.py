@@ -1,3 +1,5 @@
+data = {}
+
 def process_info(info, site):
     # Use this to build up a dictionary of mappings of mysteries to
     # categories, series, etc
@@ -11,6 +13,15 @@ def process_info(info, site):
     # Start with letting mysteries put category tags in, and collecting those
     # identify mysteries by layout?  
     
+    global data
+    
     if 'layout' in info and info['layout'] == 'mystery':
-        print (info['title'])
+        if 'categories' in info:
+            for category in info['categories']:
+                if category not in data:
+                    data[category] = []
+                    
+                if info not in data[category]:
+                    data[category].append(info.copy())
+                    
         
