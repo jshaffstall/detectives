@@ -9,6 +9,12 @@
         {
             "tags": "",
             "text": "",
+            "title": "My Account",
+            "url": "/detectives/account.html"
+        },
+        {
+            "tags": "",
+            "text": "",
             "title": "Detective's Club",
             "url": "/detectives/index.html"
         },
