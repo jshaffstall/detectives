@@ -11,15 +11,27 @@
 </main>
 <img src="{{ url_prefix + '/images/' + this.thumbnail.image }}" alt="{{ this.thumbnail.alt }}" title="{{ this.thumbnail.tooltip }}">
 
-<p>TODO: Use a technique like this to update the iframe without adding to the browser history.  Otherwise
-the back button will reload the iframe and add the mystery to the cart again. https://stackoverflow.com/a/8681618/3593818
-https://stackoverflow.com/a/25365973/3593818
-</p>
+<script type="text/javascript">
+function addToCart()
+{
+    // This hackish technique prevents the history from being modified 
+    // when we reload the iframe
+    var iframe = $("#cart");
+    var container = iframe.parent();
+    
+    iframe.remove ();
+    iframe.attr('src', 'https://UDH2QNLLEDLTFMIL.anvil.app/4W3FIEIA5OG2LESXZYPWPAJ4#?page=addtocart&item={{this.mystery_id}}');
+    
+    container.append(iframe);
+}
+</script>
 
-<p><a href="https://UDH2QNLLEDLTFMIL.anvil.app/4W3FIEIA5OG2LESXZYPWPAJ4#?page=addtocart&item={{this.mystery_id}}" target="cart">Add To Cart</a><p>
+<button type="button" onclick="addToCart()">Add To Cart</button><br>
+
+
 <script src="https://anvil.works/embed.js" async></script>
 
-<iframe scrolling="no" data-anvil-embed src="https://UDH2QNLLEDLTFMIL.anvil.app/4W3FIEIA5OG2LESXZYPWPAJ4#?page=cart" style="border: 0px none; margin-left: 0px; height: 600px; margin-top: 0; width: 300px;" name="cart">
+<iframe id="cart" scrolling="no" data-anvil-embed src="https://UDH2QNLLEDLTFMIL.anvil.app/4W3FIEIA5OG2LESXZYPWPAJ4#?page=cart" style="border: 0px none; margin-left: 0px; height: 600px; margin-top: 0; width: 300px;" name="cart">
 </iframe>
 
 {% endblock %}
