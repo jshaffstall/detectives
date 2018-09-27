@@ -5,6 +5,11 @@ Install Windows make and then inside Thonny window use make build and urubu serv
 
 From Git Bash, use make publish to update what's showing on Github Pages
 
+Public Domain Images
+--------------------
+
+http://www.reusableart.com
+
 
 TODO
 ----
