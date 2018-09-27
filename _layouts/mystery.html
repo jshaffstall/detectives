@@ -2,3 +2,19 @@
 
 {% block sidebar %}
 {% endblock %}
+
+{% block body %}
+
+<h1>{{ this.title }}</h1>
+<h2>{{ this.description }}</h2>
+
+<p>TODO: Use a technique like this to update the iframe without adding to the browser history.  Otherwise
+the back button will reload the iframe and add the mystery to the cart again. https://stackoverflow.com/a/8681618/3593818
+</p>
+
+<p><a href="https://UDH2QNLLEDLTFMIL.anvil.app/4W3FIEIA5OG2LESXZYPWPAJ4#?page=addtocart&item={{this.mystery_id}}" target="cart">Add To Cart</a><p>
+
+<iframe allowFullScreen scrolling="no" src="https://UDH2QNLLEDLTFMIL.anvil.app/4W3FIEIA5OG2LESXZYPWPAJ4#?page=cart" style="border: 0px none; margin-left: 0px; height: 600px; margin-top: 0; width: 300px;" name="cart">
+</iframe>
+
+{% endblock %}

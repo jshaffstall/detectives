@@ -1,6 +1,6 @@
 ---
 title: All the mysteries
-layout: page
+layout: index
 order: title
 ---
 
