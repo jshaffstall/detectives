@@ -26,13 +26,25 @@
         },
         {
             "tags": "",
+            "text": "Mysteries by Jay",
+            "title": "All the authors",
+            "url": "/detectives/authors/index.html"
+        },
+        {
+            "tags": "",
+            "text": "Jay",
+            "title": "Mysteries by Jay",
+            "url": "/detectives/authors/jay.html"
+        },
+        {
+            "tags": "",
             "text": "",
             "title": "Blog",
             "url": "/detectives/blog/index.html"
         },
         {
             "tags": "",
-            "text": "Caesar Cipher A Caesar Cipher is a way of encoding text by rotating letters throughout the alphabet. Miss Marple's Meanderings",
+            "text": "Caesar Cipher A Caesar Cipher is a way of encoding text by rotating letters throughout the alphabet.",
             "title": "Caesar Cipher",
             "url": "/detectives/categories/caesar-cipher.html"
         },
@@ -44,7 +56,7 @@
         },
         {
             "tags": "",
-            "text": "Short A short mystery is one that is only a handful of stages long Miss Marple's Meanderings Nancy Drew's Deliberations",
+            "text": "Short A short mystery is one that is only a handful of stages long",
             "title": "Short",
             "url": "/detectives/categories/short.html"
         },
@@ -68,13 +80,13 @@
         },
         {
             "tags": "",
-            "text": "Miss Marple's Meanderings Miss Marple has to wander to find a mysterious contact",
+            "text": "Miss Marple's Meanderings Miss Marple has to wander to find a mysterious contact Author: Jay",
             "title": "Miss Marple's Meanderings",
             "url": "/detectives/mysteries/missmarple1.html"
         },
         {
             "tags": "",
-            "text": "Nancy Drew's Deliberations Nancy Drew must deliberate to locate her father",
+            "text": "Nancy Drew's Deliberations Nancy Drew must deliberate to locate her father Author: Jay",
             "title": "Nancy Drew's Deliberations",
             "url": "/detectives/mysteries/nancydrew1.html"
         },
