@@ -1,4 +1,4 @@
-data = {'categories': {}, 'series': {}}
+data = {'categories': {}, 'series': {}, 'authors': {}}
 
 def process_info(info, site):
     # Use this to build up a dictionary of mappings of mysteries to
@@ -35,3 +35,24 @@ def process_info(info, site):
                 data['series'][info['series']['id']] = []
                 
             data['series'][info['series']['id']].append(info)
+
+        # A mystery will have one author
+        #
+        # author: author-name
+        if 'author' in info:
+            if info['author'] not in data['authors']:
+                data['authors'][info['author']] = {}
+                
+            if 'mysteries' not in data['authors'][info['author']]:
+                data['authors'][info['author']]['mysteries'] = []
+                
+            data['authors'][info['author']]['mysteries'].append(info)
+            
+    if 'layout' in info and info['layout'] == 'author':
+        author_name = info['components'][-1]
+        
+        if author_name not in data['authors']:
+            data['authors'][author_name] = {}
+                
+        data['authors'][author_name]['author'] = info
+            

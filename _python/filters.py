@@ -14,6 +14,14 @@ def categories(value):
         
     return []
 
+# The value passed in should be an author name
+def authors(value):
+    for author in data['authors']:
+        if author == value:
+            return data['authors'][author]['mysteries']
+        
+    return []
+    
 # The value passed in should be a series name
 # Mysteries will be returned in series order
 def series(value):
@@ -28,10 +36,20 @@ def series(value):
         
     return []
 
+# The value passed in should be an author name
+def name(value):
+    for author in data['authors']:
+        if author == value:
+            return data['authors'][author]['author']['name']
+        
+    return []
+    
 filters = {}
 filters['dateformat'] = dateformat
 filters['categories'] = categories
 filters['series'] = series
+filters['authors'] = authors
+filters['name'] = name
 
 def _series_order(item):
     return item['series']['order']

@@ -6,13 +6,12 @@
 {% block body %}
 
 <main>
-<h1>{{ this.title }}</h1>
+<h1>{{ this.name }}</h1>
 <h2>{{ this.description }}</h2>
 </main>
 
-{% for item in this.components[-1] | categories %}
+{% for item in this.components[-1] | authors %}
 <h3><a href="{{item.url}}">{{item.title}}</a></h3>
 {% endfor %}
-
 
 {% endblock %}

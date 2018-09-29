@@ -8,6 +8,7 @@
 <main>
 <h1>{{ this.title }}</h1>
 <h2>{{ this.description }}</h2>
+<h2><a href="{{ url_prefix + '/authors/' + this.author + '.html'}}">Author: {{ this.author | name }}</a></h2>
 </main>
 <img src="{{ url_prefix + '/images/' + this.thumbnail.image }}" alt="{{ this.thumbnail.alt }}" title="{{ this.thumbnail.tooltip }}">
 
