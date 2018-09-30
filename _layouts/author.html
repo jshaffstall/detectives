@@ -10,7 +10,7 @@
 <h2>{{ this.description }}</h2>
 </main>
 
-{% for item in this.components[-1] | authors %}
+{% for item in this.components[-1] | mysteries('author') %}
 <h3><a href="{{item.url}}">{{item.title}}</a></h3>
 {% endfor %}
 

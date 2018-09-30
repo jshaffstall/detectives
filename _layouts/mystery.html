@@ -8,7 +8,17 @@
 <main>
 <h1>{{ this.title }}</h1>
 <h2>{{ this.description }}</h2>
-<h2><a href="{{ url_prefix + '/authors/' + this.author + '.html'}}">Author: {{ this.author | name }}</a></h2>
+<h2><a href="{{ url_prefix + '/authors/' + this.author + '.html'}}">Author: {{ (this.author | author).name }}</a></h2>
+<h2>
+
+Categories
+
+{% for item in this.categories %}
+{% set category = item | category %}
+<h3><a href="{{category.url}}">{{category.title}}</a></h3>
+{% endfor %}
+
+</h2>
 </main>
 <img src="{{ url_prefix + '/images/' + this.thumbnail.image }}" alt="{{ this.thumbnail.alt }}" title="{{ this.thumbnail.tooltip }}">
 

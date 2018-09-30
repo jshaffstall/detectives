@@ -21,9 +21,12 @@ def process_info(info, site):
         if 'categories' in info:
             for category in info['categories']:
                 if category not in data['categories']:
-                    data['categories'][category] = []
+                    data['categories'][category] = {}
                     
-                data['categories'][category].append(info)
+                if 'mysteries' not in data['categories'][category]:
+                    data['categories'][category]['mysteries'] = []
+                
+                data['categories'][category]['mysteries'].append(info)
                     
         # A mystery may appear as part of a series
         #
@@ -56,3 +59,11 @@ def process_info(info, site):
                 
         data['authors'][author_name]['author'] = info
             
+    if 'layout' in info and info['layout'] == 'category':
+        category = info['components'][-1]
+        
+        if category not in data['categories']:
+            data['categories'][category] = {}
+            
+        data['categories'][category]['category'] = info
+                        
