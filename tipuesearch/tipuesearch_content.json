@@ -44,15 +44,33 @@
         },
         {
             "tags": "",
+            "text": "Basic Math This category involves basic math such as addition and subtraction",
+            "title": "Basic Math",
+            "url": "/detectives/categories/basic-math.html"
+        },
+        {
+            "tags": "",
             "text": "Caesar Cipher A Caesar Cipher is a way of encoding text by rotating letters throughout the alphabet.",
             "title": "Caesar Cipher",
             "url": "/detectives/categories/caesar-cipher.html"
         },
         {
             "tags": "",
-            "text": "Caesar Cipher Short",
+            "text": "Basic Math Caesar Cipher Narrative Reading Comprehension Short",
             "title": "All the categories",
             "url": "/detectives/categories/index.html"
+        },
+        {
+            "tags": "",
+            "text": "Narrative A narrative mystery has a strong element of story and plot",
+            "title": "Narrative",
+            "url": "/detectives/categories/narrative.html"
+        },
+        {
+            "tags": "",
+            "text": "Reading Comprehension This sort of mystery involves reading the text closely to understand the concepts presented",
+            "title": "Reading Comprehension",
+            "url": "/detectives/categories/reading-comprehension.html"
         },
         {
             "tags": "",
@@ -80,13 +98,13 @@
         },
         {
             "tags": "",
-            "text": "Miss Marple's Meanderings Miss Marple has to wander to find a mysterious contact Author: Jay",
+            "text": "Miss Marple's Meanderings Miss Marple has to wander to find a mysterious contact Author: Jay Categories Short Caesar Cipher Basic Math",
             "title": "Miss Marple's Meanderings",
             "url": "/detectives/mysteries/missmarple1.html"
         },
         {
             "tags": "",
-            "text": "Nancy Drew's Deliberations Nancy Drew must deliberate to locate her father Author: Jay",
+            "text": "Nancy Drew's Deliberations Nancy Drew must deliberate to locate her father Author: Jay Categories Short Narrative Reading Comprehension",
             "title": "Nancy Drew's Deliberations",
             "url": "/detectives/mysteries/nancydrew1.html"
         },
