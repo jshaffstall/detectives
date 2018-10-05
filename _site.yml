@@ -4,7 +4,7 @@ bootswatch: null # flatly, yeti, lumen,...
 navbar_inverse: false
 bootstrap: 3.3.6
 navbar_right_items: 1
-baseurl: detectives
+baseurl: 
 
 # Fill out your Google Analytics ID here
 # google_analytics: UA-
