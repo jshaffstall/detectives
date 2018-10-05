@@ -1,5 +1,5 @@
 ---
-title: Detective's Club
+title: Detective's Guild
 layout: home 
 content:
     - about
