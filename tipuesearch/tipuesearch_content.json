@@ -4,121 +4,121 @@
             "tags": "",
             "text": "What Is The Detective's Club? Something about the site",
             "title": "About Us",
-            "url": "/detectives/about.html"
+            "url": "/about.html"
         },
         {
             "tags": "",
             "text": "",
             "title": "My Account",
-            "url": "/detectives/account.html"
+            "url": "/account.html"
         },
         {
             "tags": "",
             "text": "",
             "title": "Detective's Guild",
-            "url": "/detectives/index.html"
+            "url": "/index.html"
         },
         {
             "tags": "",
             "text": "",
             "title": "Search",
-            "url": "/detectives/search.html"
+            "url": "/search.html"
         },
         {
             "tags": "",
             "text": "Mysteries by Jay",
             "title": "All the authors",
-            "url": "/detectives/authors/index.html"
+            "url": "/authors/index.html"
         },
         {
             "tags": "",
             "text": "Jay",
             "title": "Mysteries by Jay",
-            "url": "/detectives/authors/jay.html"
+            "url": "/authors/jay.html"
         },
         {
             "tags": "",
             "text": "",
             "title": "Blog",
-            "url": "/detectives/blog/index.html"
+            "url": "/blog/index.html"
         },
         {
             "tags": "",
             "text": "Basic Math This category involves basic math such as addition and subtraction",
             "title": "Basic Math",
-            "url": "/detectives/categories/basic-math.html"
+            "url": "/categories/basic-math.html"
         },
         {
             "tags": "",
             "text": "Caesar Cipher A Caesar Cipher is a way of encoding text by rotating letters throughout the alphabet.",
             "title": "Caesar Cipher",
-            "url": "/detectives/categories/caesar-cipher.html"
+            "url": "/categories/caesar-cipher.html"
         },
         {
             "tags": "",
             "text": "Basic Math Caesar Cipher Narrative Reading Comprehension Short",
             "title": "All the categories",
-            "url": "/detectives/categories/index.html"
+            "url": "/categories/index.html"
         },
         {
             "tags": "",
             "text": "Narrative A narrative mystery has a strong element of story and plot",
             "title": "Narrative",
-            "url": "/detectives/categories/narrative.html"
+            "url": "/categories/narrative.html"
         },
         {
             "tags": "",
             "text": "Reading Comprehension This sort of mystery involves reading the text closely to understand the concepts presented",
             "title": "Reading Comprehension",
-            "url": "/detectives/categories/reading-comprehension.html"
+            "url": "/categories/reading-comprehension.html"
         },
         {
             "tags": "",
             "text": "Short A short mystery is one that is only a handful of stages long",
             "title": "Short",
-            "url": "/detectives/categories/short.html"
+            "url": "/categories/short.html"
         },
         {
             "tags": "",
             "text": "Introduction",
             "title": "Author's Manual",
-            "url": "/detectives/manual/index.html"
+            "url": "/manual/index.html"
         },
         {
             "tags": "",
             "text": "This is a placeholder for an author's manual that will detail how to get access to \nwrite mysteries for the site, and how to use the author's tools to do so.",
             "title": "Introduction",
-            "url": "/detectives/manual/intro.html"
+            "url": "/manual/intro.html"
         },
         {
             "tags": "",
             "text": "Miss Marple's Meanderings Nancy Drew's Deliberations",
             "title": "All the mysteries",
-            "url": "/detectives/mysteries/index.html"
+            "url": "/mysteries/index.html"
         },
         {
             "tags": "",
             "text": "Miss Marple's Meanderings Miss Marple has to wander to find a mysterious contact Author: Jay Categories Short Caesar Cipher Basic Math",
             "title": "Miss Marple's Meanderings",
-            "url": "/detectives/mysteries/missmarple1.html"
+            "url": "/mysteries/missmarple1.html"
         },
         {
             "tags": "",
             "text": "Nancy Drew's Deliberations Nancy Drew must deliberate to locate her father Author: Jay Categories Short Narrative Reading Comprehension",
             "title": "Nancy Drew's Deliberations",
-            "url": "/detectives/mysteries/nancydrew1.html"
+            "url": "/mysteries/nancydrew1.html"
         },
         {
             "tags": "",
             "text": "Test Series",
             "title": "All the series",
-            "url": "/detectives/series/index.html"
+            "url": "/series/index.html"
         },
         {
             "tags": "",
             "text": "",
             "title": "Test Series",
-            "url": "/detectives/series/intro.html"
+            "url": "/series/intro.html"
         }
     ]
 }
