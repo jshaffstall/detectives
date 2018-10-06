@@ -15,6 +15,12 @@
         {
             "tags": "",
             "text": "",
+            "title": "Checkout",
+            "url": "/checkout.html"
+        },
+        {
+            "tags": "",
+            "text": "",
             "title": "Detective's Guild",
             "url": "/index.html"
         },
