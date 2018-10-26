@@ -23,6 +23,8 @@
     <link href="{{url_prefix + '/css/site.css'}}" rel="stylesheet" media="screen">
     <link href="{{url_prefix + '/css/syntax.css'}}" rel="stylesheet" media="screen">
 
+    <script src="js/guild.js"></script>
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -88,6 +90,7 @@
           </form>
 
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="" onclick="doLogout(); return false;">Logout</a></li>
             {% for item in site.reflinks['/'].content[navbar_right_index:] %}
             {%   set context = '' %}
             {%   if item.components|d and this.components[0] == item.components[0] %}
