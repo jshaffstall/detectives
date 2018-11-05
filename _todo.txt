@@ -21,3 +21,16 @@ Build the templates for the listing of all categories and series
 Need some filter for returning all the series or categories, not just one.  
 Maybe a wildcard on the existing filters?
 
+Allow iframes to request that the parent window reload all the other iframes.  
+Would be used when an iframe triggers a change in login/logout state that would
+require other iframes to be reloaded to pick up the new state.
+
+-should be able to use window.parent.postMessage to send message to parent
+ window.  Send some way of the parent window knowing which iframe send the 
+ message.  The parent window can reload the other iframes using the technique
+ that avoids creating history elements.
+ 
+-The window.parent.postMessage happens inside the Anvil forms.  The static site
+ must listen for the message and reload other iframes.  Need a class for iframes
+ that should be reloaded on these state changes.  Give each iframe an id that allows
+ the one that generated the message to not be reloaded
