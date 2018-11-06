@@ -48,7 +48,7 @@
           </form>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><iframe scrolling="no" data-anvil-embed src="https://detectives-guild-site.anvil.app#?page=loginbar" style="border: 0px none; margin-left: 0px;  margin-top: 0; width: 400px;">
+            <li><iframe id="loginbar" scrolling="no" data-anvil-embed data-guild src="https://detectives-guild-site.anvil.app#?page=loginbar" style="border: 0px none; margin-left: 0px;  margin-top: 0; width: 400px;">
             </iframe></li>
             
             <li><a href="/account.html">My Account</a></li>
@@ -75,22 +75,7 @@ Categories
 </main>
 <img src="/images/marple1.jpg" alt="Miss Marple walking away" title="Where is she going?">
 
-<script type="text/javascript">
-function addToCart()
-{
-    // This hackish technique prevents the history from being modified 
-    // when we reload the iframe
-    var iframe = $("#cart");
-    var container = iframe.parent();
-    
-    iframe.remove ();
-    iframe.attr('src', 'https://detectives-guild-site.anvil.app#?page=addtocart&item=ea7e6b4d-1445-4416-b588-36e0de187e7c');
-    
-    container.append(iframe);
-}
-</script>
-
-<button type="button" onclick="addToCart()">Add To Cart</button><br>
+<button type="button" onclick="refreshIframe($('#cart'), 'https://detectives-guild-site.anvil.app#?page=addtocart&item=ea7e6b4d-1445-4416-b588-36e0de187e7c')">Add To Cart</button><br>
 <form action="../checkout.html"><input type="submit" value="Checkout"></form>
 
 <iframe id="cart" scrolling="no" data-anvil-embed src="https://detectives-guild-site.anvil.app#?page=cart" style="border: 0px none; margin-left: 0px;  margin-top: 0; width: 300px;" name="cart">
@@ -102,7 +87,7 @@ function addToCart()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="js/guild.js"></script>
+    <script src="/js/guild.js"></script>
  
 
   </body>
