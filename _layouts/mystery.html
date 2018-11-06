@@ -22,22 +22,7 @@ Categories
 </main>
 <img src="{{ url_prefix + '/images/' + this.thumbnail.image }}" alt="{{ this.thumbnail.alt }}" title="{{ this.thumbnail.tooltip }}">
 
-<script type="text/javascript">
-function addToCart()
-{
-    // This hackish technique prevents the history from being modified 
-    // when we reload the iframe
-    var iframe = $("#cart");
-    var container = iframe.parent();
-    
-    iframe.remove ();
-    iframe.attr('src', 'https://detectives-guild-site.anvil.app#?page=addtocart&item={{this.mystery_id}}');
-    
-    container.append(iframe);
-}
-</script>
-
-<button type="button" onclick="addToCart()">Add To Cart</button><br>
+<button type="button" onclick="refreshIframe($('#cart'), 'https://detectives-guild-site.anvil.app#?page=addtocart&item={{this.mystery_id}}')">Add To Cart</button><br>
 <form action="../checkout.html"><input type="submit" value="Checkout"></form>
 
 <iframe id="cart" scrolling="no" data-anvil-embed src="https://detectives-guild-site.anvil.app#?page=cart" style="border: 0px none; margin-left: 0px;  margin-top: 0; width: 300px;" name="cart">
