@@ -1,6 +1,13 @@
-$( document ).ready(function() 
+$(document).ready(function() 
 {
-    bindEvent(window, 'message', function (e) {
-        alert(e.data);
-    });    
+    window.addEventListener("message", receiveMessage);
+
+    //$(function () {
+    function receiveMessage(event)
+    {
+        if (event.data && event.data.hasOwnProperty('type') && event.data.type == 'refresh')
+        {
+            alert(event.data.sender);
+        }
+    }
 });
