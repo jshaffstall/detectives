@@ -16,10 +16,10 @@ $(document).ready(function()
             
             for (var i in iframes) 
             {
-                i = $(i)
+                iframe = $(iframes[i])
                 
-                if (i.contentWindow != event.source)
-                    refreshIframe(i);
+                if (iframe.contentWindow != event.source)
+                    refreshIframe(iframe);
             }            
         }
     }
