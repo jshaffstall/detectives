@@ -16,7 +16,7 @@ $(document).ready(function()
             
             for (var i in iframes) 
             {
-                iframe = $(iframes[i])
+                iframe = iframes[i]
                 
                 if (iframe.contentWindow != event.source)
                     refreshIframe(iframe);
@@ -29,13 +29,13 @@ function refreshIframe(iframe, src="")
 {
     // This hackish technique prevents the history from being modified 
     // when we reload the iframe
-    var container = iframe.parent();
+    var container = iframe.parentNode;
     
     if (src == "")
         src = iframe.src
     
     iframe.remove ();
-    iframe.attr('src', src);
+    iframe.setAttribute('src', src);
     
     container.append(iframe);
 }
