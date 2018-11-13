@@ -22,10 +22,13 @@ Categories
 </main>
 <img src="{{ url_prefix + '/images/' + this.thumbnail.image }}" alt="{{ this.thumbnail.alt }}" title="{{ this.thumbnail.tooltip }}">
 
-<button type="button" onclick="refreshIframe($('#cart'), 'https://detectives-guild-site.anvil.app#?page=addtocart&item={{this.mystery_id}}')">Add To Cart</button><br>
+<button type="button" onclick="refreshIframe(document.getElementById('addtocart'), 'https://detectives-guild-site.anvil.app#?page=addtocart&item={{this.mystery_id}}'); refreshIframe(document.getElementById('cart'), 'https://detectives-guild-site.anvil.app#?page=cart');">Add To Cart</button><br>
 <form action="../checkout.html"><input type="submit" value="Checkout"></form>
 
-<iframe id="cart" scrolling="no" data-anvil-embed src="https://detectives-guild-site.anvil.app#?page=cart" style="border: 0px none; margin-left: 0px;  margin-top: 0; width: 300px;" name="cart">
+<iframe id="cart" scrolling="no" data-anvil-embed data-guild src="https://detectives-guild-site.anvil.app#?page=cart" style="border: 0px none; margin-left: 0px;  margin-top: 0; width: 300px;" name="cart">
+</iframe>
+
+<iframe id="addtocart" style="width:0; height:0; border:0; border:none" src="">
 </iframe>
 
 {% endblock %}
