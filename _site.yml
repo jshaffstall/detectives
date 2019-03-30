@@ -3,7 +3,7 @@ brand: Detectives Guild
 bootswatch: null # flatly, yeti, lumen,...
 navbar_inverse: false
 bootstrap: 3.3.6
-navbar_right_items: 1
+navbar_right_items: 0
 baseurl: 
 
 # Fill out your Google Analytics ID here
