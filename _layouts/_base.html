@@ -35,25 +35,22 @@
     <nav class="navbar navbar-expand-md fixed-top">
         <a class="navbar-brand" href="{{url_prefix + '/'}}">{{site.brand}}</a>
         
-        <div class="navbar-header">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-        </div>
-        
         <div class="navbar-collapse collapse">
 
-          <ul class="nav navbar-nav navbar-left">
+        <ul class="navbar-nav mr-auto">
             {% block home %}
             {% endblock %}
             {% for item in site.reflinks['/'].content[:navbar_right_index] %}
-            {%   set context = '' %}
+            {%   set context = 'class="nav-item"' %}
             {%   if item.components|d and this.components[0] == item.components[0] %}
-            {%     set context = ' class="active"' %}
+            {%     set context = ' class="nav-item active"' %}
             {%   endif %}
             {%   if item.content|d and item.dropdown %}
-            <li{{context}} class="dropdown">
+            <li {{context}} class="dropdown">
               <a href="{{item.url}}" class="dropdown-toggle" data-toggle="dropdown">{{item.title}} <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 {% for subitem in item.content %}
@@ -62,18 +59,20 @@
               </ul>
             </li>
             {% else %}
-            <li{{context}}><a href="{{item.url}}">{{item.title}}</a></li>
+            <li {{context}}><a class="nav-link" href="{{item.url}}">{{item.title}}</a></li>
             {%   endif %}
             {% endfor %}
           </ul>
 
-          <form class="navbar-form navbar-left" action="/search.html" role="search">
-            <div class="form-group">
-              <input type="text" required name="q" id="tipue_search_input" class="form-control" placeholder="Search"> 
-            </div>
-          </form>
-
           <ul class="nav navbar-nav navbar-right">
+          <li>
+            <form class="form-inline my-2 my-lg-0" action="/search.html" role="search">
+            <div class="form-group">
+              <input type="text" required name="q" id="tipue_search_input" class="form-control mr-sm-2" placeholder="Search"> 
+            </div>
+          </form>          
+          
+          </li>
             <li>
             <span class="btn btn-info" id="cart">
             <span class="fa fa-shopping-cart"></span>
