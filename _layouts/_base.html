@@ -2,28 +2,16 @@
 <html>
   <head>
     <title>{{this.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
-    <!-- Bootstrap -->
-    {% set bootstrap = "3.1.1" %}
-    {% if site.bootstrap %}
-    {%   set bootstrap = site.bootstrap %}
-    {% endif %}
-    {% if site.bootswatch %}
-    {%   set theme_path = "bootswatch/"+ bootstrap + '/' + site.bootswatch %}
-    {% else %}
-    {%   set theme_path = "bootstrap/" + bootstrap + "/css" %}
-    {% endif %}
-    <link href="//netdna.bootstrapcdn.com/{{theme_path}}/bootstrap.min.css" rel="stylesheet" media="screen">
-
     {% set url_prefix = '' %}
     {% if site.baseurl %}
     {%   set url_prefix = '/' + site.baseurl %}
     {% endif %}
+    
+    <link href="{{url_prefix + '/css/4.5.2/bootstrap.min.css'}}" rel="stylesheet">
+    <link href="{{url_prefix + '/css/font-awesome.min.css'}}" rel="stylesheet">
     <link href="{{url_prefix + '/css/site.css'}}" rel="stylesheet" media="screen">
-    <link href="{{url_prefix + '/css/syntax.css'}}" rel="stylesheet" media="screen">
-
-    <script src="https://anvil.works/embed.js" async></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,25 +27,21 @@
   <body>
 
     <!-- Fixed navbar -->
-    {% set navbar_style = "navbar-default" %}
-    {% if site.navbar_inverse %}
-    {%   set navbar_style = "navbar-inverse" %}
-    {% endif %}
     {% set navbar_right_items = 0 %}
     {% if site.navbar_right_items is defined%}
     {%   set navbar_right_items = site.navbar_right_items %}
     {% endif %}
     {% set navbar_right_index = site.reflinks['/'].content|length - navbar_right_items %}
-    <div class="navbar {{navbar_style}} navbar-fixed-top">
-      <div class="container">
+    <nav class="navbar navbar-expand-md fixed-top">
+        <a class="navbar-brand" href="{{url_prefix + '/'}}">{{site.brand}}</a>
+        
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="{{url_prefix + '/'}}">{{site.brand}}</a>
+
         </div>
+        
         <div class="navbar-collapse collapse">
 
           <ul class="nav navbar-nav navbar-left">
@@ -90,8 +74,13 @@
           </form>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><iframe id="loginbar" scrolling="no"  data-anvil-embed data-guild src="https://detectives-guild-site.anvil.app#?page=loginbar" style="border: 0px none; margin-left: 0px;  margin-top: 0; width: 400px; height: 50px;">
-            </iframe></li>
+            <li>
+            <span class="btn btn-info" id="cart">
+            <span class="fa fa-shopping-cart"></span>
+            Cart
+            <span class="badge my-cart-badge btn-success"></span>
+            </span>
+            </li>
             
             {% for item in site.reflinks['/'].content[navbar_right_index:] %}
             {%   set context = '' %}
@@ -115,17 +104,17 @@
 
         </div><!--/.nav-collapse -->
       </div>
-    </div>
+    </nav>
 
     {% block body %}
     {% endblock %}
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/{{bootstrap}}/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/4.5.2/bootstrap.bundle.min.js"></script>
+    <script src="/js/cart-localstorage.min.js"></script>
     <script src="/js/guild.js"></script>
+    
     {% block body_addon %}
     {% endblock %} 
 

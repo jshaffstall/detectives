@@ -1,41 +1,69 @@
 $(document).ready(function() 
 {
-    window.addEventListener("message", receiveMessage);
-
-    function receiveMessage(event)
-    {
-        if (event.data && event.data.hasOwnProperty('type') && event.data.type == 'refresh')
-        {
-            // We need to refresh every Detectives Guild iframe
-            // except for the one that sent the message
-            //
-            // Every Detectives Guild iframe must be defined with 
-            // a data-guild attribute
+    $('.add-to-cart').on('click', function () {
+        var cart = $('#cart');
+        var imgtodrag = $(this).parent('.item').find("img").eq(0);
+        var data = this.dataset;
+        
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            })
+                .css({
+                'opacity': '0.5',
+                    'position': 'absolute',
+                    'height': '150px',
+                    'width': '150px',
+                    'z-index': '100'
+            })
+                .appendTo($('body'))
+                .animate({
+                'top': cart.offset().top + 10,
+                    'left': cart.offset().left + 10,
+                    'width': 75,
+                    'height': 75
+            }, 1000, 'easeInOutExpo');
             
-            var iframes = document.querySelectorAll("iframe[data-guild]");
-            
-            for (var i in iframes) 
-            {
-                iframe = iframes[i]
+            setTimeout(function () {
+                cart.effect("shake", {
+                    times: 2
+                }, 200);
                 
-                if (iframe.contentWindow != event.source)
-                    refreshIframe(iframe);
-            }            
+                addToCart({id: data.id, name: data.name, price: data.price})
+            }, 1500);
+
+            imgclone.animate({
+                'width': 0,
+                    'height': 0
+            }, function () {
+                $(this).detach()
+            });
         }
-    }
+    });
+
+    $("#cart").on("click", function() {
+    $(".shopping-cart").fadeToggle( "fast");
+  });  
+
+    renderCart(cartLS.list())
+    cartLS.onChange(renderCart)  
 });
 
-function refreshIframe(iframe, src="")
+function renderCart(items) {
+    const $cart_qty = document.querySelector(".my-cart-badge")
+
+    if (items.length > 0)
+        $cart_qty.textContent = items.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0); 
+    else
+        $cart_qty.textContent = ""; 
+}
+
+function addToCart(item)
 {
-    // This hackish technique prevents the history from being modified 
-    // when we reload the iframe
-    var container = iframe.parentNode;
-    
-    if (src == "")
-        src = iframe.src
-    
-    iframe.remove ();
-    iframe.setAttribute('src', src);
-    
-    container.append(iframe);
+    if (cartLS.exists(item.id))
+        cartLS.quantity(item.id,1);
+    else
+        cartLS.add(item);
 }
