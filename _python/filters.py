@@ -3,6 +3,19 @@ from .hooks import data
 def dateformat(value, format="%d-%b-%Y"):
     return value.strftime(format)
 
+def priceformat(value):
+    # This returns an exception that makes no sense:
+    # 'dict object' has no attribute 'price'
+    # At this point value is a simple integer
+    # and the return statement works, so the
+    # exception is in the Jinja2 filter handling
+    # Catching the exception here allows the formatted
+    # string to be used properly.
+    try:
+        return "${:,.2f}".format(value/100)
+    except Exception as ex:
+        pass
+
 def mysteries(value, which):
     # The value passed in should be a category slug
     if which == 'categories':
@@ -54,6 +67,7 @@ filters['mysteries'] = mysteries
 filters['series'] = series
 filters['author'] = author
 filters['category'] = category
+filters['priceformat'] = priceformat
 
 def _series_order(item):
     return item['series']['order']

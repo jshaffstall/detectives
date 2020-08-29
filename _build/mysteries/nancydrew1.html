@@ -73,16 +73,14 @@ Categories
 
 </h2>
 </main>
-<img src="/images/drew1.jpg" alt="Nancy Drew sitting in a train cabin" title="Where is father? she wonders">
 
-<button type="button" onclick="refreshIframe(document.getElementById('addtocart'), 'https://detectives-guild-site.anvil.app#?page=addtocart&item=23f2bede-f44a-4d0f-87dd-5692fb665208'); refreshIframe(document.getElementById('cart'), 'https://detectives-guild-site.anvil.app#?page=cart');">Add To Cart</button><br>
-<form action="../checkout.html"><input type="submit" value="Checkout"></form>
-
-<iframe id="cart" scrolling="no" data-anvil-embed data-guild src="https://detectives-guild-site.anvil.app#?page=cart" style="border: 0px none; margin-left: 0px;  margin-top: 0; width: 300px;" name="cart">
-</iframe>
-
-<iframe id="addtocart" style="width:0; height:0; border:0; border:none" src="">
-</iframe>
+    <div class="col-md-3 text-center item">
+      <img src="/images/drew1.jpg" alt="Nancy Drew sitting in a train cabin" title="Where is father? she wonders">
+      <br>
+      Nancy Drew's Deliberations - <strong>$20.00</strong>
+      <br>
+      <button class="btn btn-danger add-to-cart" data-id="23f2bede-f44a-4d0f-87dd-5692fb665208" data-name="Nancy Drew's Deliberations" data-price="2000">Add to Cart</button>
+    </div>
 
 
     <script src="/js/jquery-3.5.1.min.js"></script>
