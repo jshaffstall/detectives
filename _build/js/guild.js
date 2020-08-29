@@ -75,8 +75,19 @@ function populateCart()
     var $cartTable = $("#my-cart-modal");
     $cartTable.empty();    
     
+    var items = cartLS.list().map(item => {
+        var newitem = {}
+        
+        newitem['name'] = item['name'];
+        newitem['quantity'] = item['quantity'];
+        newitem['price'] = (item['price']/100).toFixed(2);
+        newitem['total'] = (item['price']/100*item['quantity']).toFixed(2);
+        
+        return newitem;
+    });
+    
     var template = document.getElementById('cart-items-template').innerHTML;
-    var rendered = Mustache.render(template, {items: cartLS.list()}, {}, [ '<%', '%>' ]);
+    var rendered = Mustache.render(template, {items: items}, {}, [ '<%', '%>' ]);
     
     $cartTable.html(rendered);    
 }
