@@ -33,7 +33,7 @@
     <div class="modal-body" id="my-cart-table">
     <table class="table table-hover table-responsive" >    
         <%#items%>
-        <tr>
+        <tr data-id=<%id%>>
         <td><%name%></td>
         <td>$<%price%></td>
         <td class="text-right"><input type="number" min="1" style="width: 70px;" class="cart-item-quantity" value="<%quantity%>"/></td>  
@@ -41,6 +41,15 @@
         <td class="text-center" style="width: 30px;"><a href="javascript:void(0);" class="btn btn-xs btn-danger cart-item-remove">X</a></td>
         </tr>
         <%/items%>
+        <tr>
+        <td></td>
+        <td><strong>Total</strong></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"><strong>$<%total%></strong></td>
+        <td></td>
+        </tr>
+        <div class="alert alert-danger" role="alert" style="display:<%empty_msg%>">Your cart is empty</div>
     </table>        
     </div>
     <div class="modal-footer">

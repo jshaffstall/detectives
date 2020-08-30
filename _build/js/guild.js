@@ -50,7 +50,6 @@ $(document).ready(function()
         populateCart();
         $("#my-cart-modal").modal('show');
     });  
-
 });
 
 function updateCartIcon(items) {
@@ -74,20 +73,35 @@ function populateCart()
 {
     var $cartTable = $("#my-cart-modal");
     $cartTable.empty();    
+    var total = 0;
     
     var items = cartLS.list().map(item => {
         var newitem = {}
         
+        newitem['id'] = item['id'];
         newitem['name'] = item['name'];
         newitem['quantity'] = item['quantity'];
         newitem['price'] = (item['price']/100).toFixed(2);
         newitem['total'] = (item['price']/100*item['quantity']).toFixed(2);
+        total += item['price']/100*item['quantity']
         
         return newitem;
     });
     
-    var template = document.getElementById('cart-items-template').innerHTML;
-    var rendered = Mustache.render(template, {items: items}, {}, [ '<%', '%>' ]);
+    empty_msg = cartLS.list().length == 0 ? "block": "none";
     
-    $cartTable.html(rendered);    
+    var template = document.getElementById('cart-items-template').innerHTML;
+    var rendered = Mustache.render(template, {empty_msg: empty_msg, total: total.toFixed(2), items: items}, {}, [ '<%', '%>' ]);
+    
+    $cartTable.html(rendered);  
+    
+    $(".cart-item-quantity").on('change', function () {
+        // Update the cartLS view of the quantity
+        var id = $(this).closest("tr").data("id");
+        
+        cartLS.update(id, "quantity", $(this).val());
+        
+        // Then repopulate the cart
+        populateCart();
+    });
 }
