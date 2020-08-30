@@ -52,21 +52,23 @@ $(document).ready(function()
     });  
 });
 
-function updateCartIcon(items) {
-    const $cart_qty = document.querySelector(".my-cart-badge")
-
-    if (items.length > 0)
-        $cart_qty.textContent = items.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0); 
-    else
-        $cart_qty.textContent = ""; 
-}
-
 function addToCart(item)
 {
     if (cartLS.exists(item.id))
         cartLS.quantity(item.id,1);
     else
         cartLS.add(item);
+}
+
+function updateCartIcon(items) {
+    const $cart_qty = document.querySelector(".my-cart-badge")
+
+    console.log(items);
+    
+    if (items.length > 0)
+        $cart_qty.textContent = items.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0); 
+    else
+        $cart_qty.textContent = ""; 
 }
 
 function populateCart()
@@ -99,7 +101,17 @@ function populateCart()
         // Update the cartLS view of the quantity
         var id = $(this).closest("tr").data("id");
         
-        cartLS.update(id, "quantity", $(this).val());
+        cartLS.update(id, "quantity", parseInt($(this).val()));
+        
+        // Then repopulate the cart
+        populateCart();
+    });
+    
+    $(".cart-item-remove").on('click', function () {
+        // Update the cartLS view of the quantity
+        var id = $(this).closest("tr").data("id");
+        
+        cartLS.remove(id);
         
         // Then repopulate the cart
         populateCart();
