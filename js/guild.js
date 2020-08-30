@@ -75,7 +75,6 @@ function populateCart()
 {
     var $cartTable = $("#my-cart-modal");
     $cartTable.empty();    
-    var total = 0;
     
     var items = cartLS.list().map(item => {
         var newitem = {}
@@ -85,15 +84,15 @@ function populateCart()
         newitem['quantity'] = item['quantity'];
         newitem['price'] = (item['price']/100).toFixed(2);
         newitem['total'] = (item['price']/100*item['quantity']).toFixed(2);
-        total += item['price']/100*item['quantity']
         
         return newitem;
     });
     
+    total = (cartLS.total()/100).toFixed(2)
     empty_msg = cartLS.list().length == 0 ? "block": "none";
     
     var template = document.getElementById('cart-items-template').innerHTML;
-    var rendered = Mustache.render(template, {empty_msg: empty_msg, total: total.toFixed(2), items: items}, {}, [ '<%', '%>' ]);
+    var rendered = Mustache.render(template, {empty_msg: empty_msg, total: total, items: items}, {}, [ '<%', '%>' ]);
     
     $cartTable.html(rendered);  
     
@@ -112,6 +111,33 @@ function populateCart()
         var id = $(this).closest("tr").data("id");
 
         cartLS.remove(id);
+        
+        // Then repopulate the cart
+        populateCart();
+    });
+    
+    $(".my-cart-discount-button").on('click', function () {
+        // Ask the server what sort of discount applies
+        var mysteries = cartLS.list().map(item => {
+            return item['id'];
+        });        
+        
+        discount = $("#my-cart-discount").val();
+        order_item = {mysteries: mysteries, discount: discount}
+    
+        $.ajax({
+            url: "https://detectives-guild.anvil.app/_/api/order/total",
+            type: "POST",
+            data: JSON.stringify(order_item), 
+            contentType: 'application/json',
+            dataType: 'json',
+            async: false,
+            success: function (result) {
+                console.log(result);
+            }
+        });
+        
+        // Store the results so the browswer remembers them
         
         // Then repopulate the cart
         populateCart();
