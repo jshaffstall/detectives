@@ -110,7 +110,7 @@ function populateCart()
     $(".cart-item-remove").on('click', function () {
         // Update the cartLS view of the quantity
         var id = $(this).closest("tr").data("id");
-        
+
         cartLS.remove(id);
         
         // Then repopulate the cart
