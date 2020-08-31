@@ -100,6 +100,10 @@ function populateCart()
     
     $cartTable.html(rendered);  
     
+    // We have to bind these functions after we add the 
+    // rendered cart to the page, or they won't affect
+    // the newly added cart items
+    
     $(".cart-item-quantity").on('change', function () {
         // Update the cartLS view of the quantity
         var id = $(this).closest("tr").data("id");
@@ -160,6 +164,10 @@ function populateCart()
                     
                     // Then repopulate the cart
                     populateCart();
+                }
+                else
+                {
+                    alert ("Error validating the discount code: '" + result.error + "'. If the problem persists go to our support page and contact us.");
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
