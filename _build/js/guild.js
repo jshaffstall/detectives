@@ -142,7 +142,12 @@ function populateCart()
         
         // Ask the server what sort of discount applies
         var mysteries = cartLS.list().map(item => {
-            return item['id'];
+            newitem = {}
+            
+            newitem['id'] = item['id'];
+            newitem['quantity'] = item['quantity'];
+            
+            return newitem;
         });        
         
         order_item = {mysteries: mysteries, discount: discount}
