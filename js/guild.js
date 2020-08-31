@@ -167,7 +167,7 @@ function populateCart()
                 }
                 else
                 {
-                    alert ("Error validating the discount code: '" + result.error + "'. If the problem persists go to our support page and contact us.");
+                    alert (result.error);
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
