@@ -63,8 +63,6 @@ function addToCart(item)
 function updateCartIcon(items) {
     const $cart_qty = document.querySelector(".my-cart-badge")
 
-    console.log(items);
-    
     if (items.length > 0)
         $cart_qty.textContent = items.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0); 
     else
@@ -88,11 +86,15 @@ function populateCart()
         return newitem;
     });
     
-    total = (cartLS.total()/100).toFixed(2)
+    if (localStorage.getItem("discountedTotal") != null)
+        total = parseInt(localStorage.getItem("discountedTotal"));
+    else
+        total = cartLS.total();
+        
     empty_msg = cartLS.list().length == 0 ? "block": "none";
     
     var template = document.getElementById('cart-items-template').innerHTML;
-    var rendered = Mustache.render(template, {empty_msg: empty_msg, total: total, items: items}, {}, [ '<%', '%>' ]);
+    var rendered = Mustache.render(template, {empty_msg: empty_msg, total: (total/100).toFixed(2), items: items, discount: localStorage.getItem("discountCode")}, {}, [ '<%', '%>' ]);
     
     $cartTable.html(rendered);  
     
@@ -116,13 +118,27 @@ function populateCart()
         populateCart();
     });
     
+    $(".my-cart-discount-clear-button").on('click', function () {
+        localStorage.removeItem("discountCode");
+        localStorage.removeItem("discountedTotal");        
+        populateCart();
+    });
+    
     $(".my-cart-discount-button").on('click', function () {
+        // Make sure we have a discount code to apply
+        var discount = $("#my-cart-discount").val();
+        
+        if (! discount)
+        {
+            alert ("You must enter a discount code in the box");
+            return;
+        }
+        
         // Ask the server what sort of discount applies
         var mysteries = cartLS.list().map(item => {
             return item['id'];
         });        
         
-        discount = $("#my-cart-discount").val();
         order_item = {mysteries: mysteries, discount: discount}
     
         $.ajax({
@@ -131,15 +147,22 @@ function populateCart()
             data: JSON.stringify(order_item), 
             contentType: 'application/json',
             dataType: 'json',
-            async: false,
             success: function (result) {
-                console.log(result);
+                if (result.status == "success")
+                {
+                    // Store the results so the browswer remembers them
+                    // Store both the discount code being applied,
+                    // and the discounted total
+                    localStorage.setItem("discountCode", discount);
+                    localStorage.setItem("discountedTotal", result.total);
+                    
+                    // Then repopulate the cart
+                    populateCart();
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert ("Unable to contact server to validate discount code.  Try again in a while, if the problem persists go to our support page and contact us.");
             }
         });
-        
-        // Store the results so the browswer remembers them
-        
-        // Then repopulate the cart
-        populateCart();
     });
 }
