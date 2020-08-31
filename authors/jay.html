@@ -31,7 +31,7 @@
         <td><%name%></td>
         <td>$<%price%></td>
         <td class="text-right"><input type="number" min="1" style="width: 70px;" class="cart-item-quantity" value="<%quantity%>"/></td>  
-        <td class="text-right"><%total%></td>
+        <td class="text-right">$<%total%></td>
         <td class="text-center" style="width: 30px;"><a href="javascript:void(0);" class="btn btn-xs btn-danger cart-item-remove">X</a></td>
         </tr>
         <%/items%>
@@ -43,8 +43,9 @@
         <td></td>
         </tr>
         <tr>
-        <td colspan="3"><input type="text" id="my-cart-discount" placeholder="Enter a discount code"></td>
+        <td><input type="text" id="my-cart-discount" placeholder="Enter a discount code" value="<%discount%>" size=15></td>
         <td colspan="2"><button type="button" class="btn btn-success my-cart-discount-button">Apply Code</button></td>
+        <td colspan="2"><button type="button" class="btn btn-danger my-cart-discount-clear-button">Clear Code</button></td>
         </tr>
         <div class="alert alert-danger" role="alert" style="display:<%empty_msg%>">Your cart is empty</div>
     </table>        
