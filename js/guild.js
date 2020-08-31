@@ -1,3 +1,5 @@
+var serverUrl = "https://detectives-guild.anvil.app/_/api/";
+
 $(document).ready(function() 
 {
     $('.add-to-cart').on('click', function () {
@@ -142,7 +144,7 @@ function populateCart()
         order_item = {mysteries: mysteries, discount: discount}
     
         $.ajax({
-            url: "https://detectives-guild.anvil.app/_/api/order/total",
+            url: serverUrl+"order/total",
             type: "POST",
             data: JSON.stringify(order_item), 
             contentType: 'application/json',
