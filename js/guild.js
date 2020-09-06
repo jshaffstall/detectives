@@ -100,6 +100,14 @@ function populateCart()
     
     $cartTable.html(rendered);  
     
+    var style = {
+      base: {
+        color: "#32325d",
+      }
+    };
+    
+    //var stripe = Stripe('pk_test_0kIbVwHbShyR9Jak5SnRE9jo');
+    
     // We have to bind these functions after we add the 
     // rendered cart to the page, or they won't affect
     // the newly added cart items
@@ -124,6 +132,10 @@ function populateCart()
         populateCart();
     });
     
+    $("#cart-email").on('change', function () {
+        localStorage.setItem("email", $(this).val());
+    });
+    
     $(".my-cart-discount-clear-button").on('click', function () {
         localStorage.removeItem("discountCode");
         localStorage.removeItem("discountedTotal");        
@@ -137,6 +149,14 @@ function populateCart()
         if (! discount)
         {
             alert ("You must enter a discount code in the box");
+            return;
+        }
+        
+        var email = $("#cart-email").val();
+        
+        if (! email)
+        {
+            alert ("You must enter the email of your Detectives Guild account");
             return;
         }
         
@@ -179,5 +199,15 @@ function populateCart()
                 alert ("Unable to contact server to validate discount code.  Try again in a while, if the problem persists go to our support page and contact us.");
             }
         });
+    });
+
+    $(".my-cart-checkout").on('click', function () {
+        var email = $("#cart-email").val();
+        
+        if (! email)
+        {
+            alert ("You must enter the email of your Detectives Guild account");
+            return;
+        }
     });
 }
