@@ -1,4 +1,5 @@
-var serverUrl = "https://detectives-guild.anvil.app/_/api/";
+var serverUrl = "https://app.detectivesguild.com/_/api/";
+//var serverUrl = "https://detectives-guild.anvil.app/_/api/";
 
 $(document).ready(function() 
 {
@@ -106,7 +107,7 @@ function populateCart()
       }
     };
     
-    //var stripe = Stripe('pk_test_0kIbVwHbShyR9Jak5SnRE9jo');
+    var stripe = Stripe('pk_test_0kIbVwHbShyR9Jak5SnRE9jo');
     
     // We have to bind these functions after we add the 
     // rendered cart to the page, or they won't affect
@@ -152,15 +153,6 @@ function populateCart()
             return;
         }
         
-        var email = $("#cart-email").val();
-        
-        if (! email)
-        {
-            alert ("You must enter the email of your Detectives Guild account");
-            return;
-        }
-        
-        // Ask the server what sort of discount applies
         var mysteries = cartLS.list().map(item => {
             newitem = {}
             
@@ -170,6 +162,7 @@ function populateCart()
             return newitem;
         });        
         
+        // Ask the server what sort of discount applies
         order_item = {mysteries: mysteries, discount: discount}
     
         $.ajax({
@@ -209,5 +202,60 @@ function populateCart()
             alert ("You must enter the email of your Detectives Guild account");
             return;
         }
+        
+        var discount = $("#my-cart-discount").val();
+        
+        var mysteries = cartLS.list().map(item => {
+            newitem = {}
+            
+            newitem['id'] = item['id'];
+            newitem['quantity'] = item['quantity'];
+            
+            return newitem;
+        });        
+        
+        order_item = {mysteries: mysteries, discount: discount, email: email}
+        
+        $.ajax({
+            url: serverUrl+"order/submit",
+            type: "POST",
+            data: JSON.stringify(order_item), 
+            contentType: 'application/json',
+            dataType: 'json',
+            success: function (result) {
+                if (result.status == "success")
+                {
+                    // Display the user's order id so they can
+                    // write it down if they like
+                    alert ("Your Order Id is " + result.order_id + ". Write it down in case you need to contact us about your order");
+                    
+                    if (result.id)
+                    {
+                        // If there's a Stripe session, then
+                        // redirect to it
+                        stripe.redirectToCheckout({ sessionId: result.id })
+                        .then(function(result) {
+                            alert("Problem with checkout: " + result.error.message + ".  Please contact support if this error persists");
+                        });
+                    }
+                    else
+                    {
+                        // If there's no Stripe session, clear the 
+                        // shopping cart and close the cart modal
+                        $("#my-cart-modal").modal('hide');
+                        cartLS.destroy();
+                        localStorage.removeItem("discountCode");
+                        localStorage.removeItem("discountedTotal");        
+                    }
+                }
+                else
+                {
+                    alert (result.error);
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert ("Unable to contact server to submit the order.  Try again in a while, if the problem persists go to our support page and contact us.");
+            }
+        });
     });
 }
