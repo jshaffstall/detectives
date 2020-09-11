@@ -9,18 +9,6 @@
         {
             "tags": "",
             "text": "",
-            "title": "My Account",
-            "url": "/account.html"
-        },
-        {
-            "tags": "",
-            "text": "",
-            "title": "Checkout",
-            "url": "/checkout.html"
-        },
-        {
-            "tags": "",
-            "text": "",
             "title": "Detective's Guild",
             "url": "/index.html"
         },
@@ -29,6 +17,12 @@
             "text": "",
             "title": "Search",
             "url": "/search.html"
+        },
+        {
+            "tags": "",
+            "text": "",
+            "title": "Stripe Checkout",
+            "url": "/stripe.html"
         },
         {
             "tags": "",
