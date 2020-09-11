@@ -1,6 +1,0 @@
----
-title: Checkout
-layout: checkout
----
-
-
