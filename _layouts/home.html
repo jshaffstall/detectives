@@ -16,6 +16,15 @@
  </div>
 </div>
 
+    {% block content %}
+    <div class="col-md-7 content" role="main">
+    <main>
+      {{this.body}}
+    </main>
+    </div>
+    {% endblock %}
+
+
 {% include 'footer.html' %}
 
 {% endblock %}
