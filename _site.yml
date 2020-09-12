@@ -8,6 +8,9 @@ baseurl:
 
 
 reflinks:
-    urubu:
-        url: http://urubu.jandecaluwe.com
-        title: Urubu
+    account-app:
+        url: https://app.detectivesguild.com/#account
+        title: My Account
+    support:
+        url: https://detectives-guild.freshdesk.com/
+        title: Contact Support
