@@ -228,6 +228,11 @@ function populateCart()
                     // Display the user's order id so they can
                     // write it down if they like
                     alert ("Your Order Id is " + result.order_id + ". Write it down in case you need to contact us about your order");
+
+                    $("#my-cart-modal").modal('hide');
+                    cartLS.destroy();
+                    localStorage.removeItem("discountCode");
+                    localStorage.removeItem("discountedTotal");        
                     
                     if (result.id)
                     {
@@ -237,15 +242,6 @@ function populateCart()
                         .then(function(result) {
                             alert("Problem with checkout: " + result.error.message + ".  Please contact support if this error persists");
                         });
-                    }
-                    else
-                    {
-                        // If there's no Stripe session, clear the 
-                        // shopping cart and close the cart modal
-                        $("#my-cart-modal").modal('hide');
-                        cartLS.destroy();
-                        localStorage.removeItem("discountCode");
-                        localStorage.removeItem("discountedTotal");        
                     }
                 }
                 else
