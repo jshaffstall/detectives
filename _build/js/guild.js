@@ -97,7 +97,7 @@ function populateCart()
     empty_msg = cartLS.list().length == 0 ? "block": "none";
     
     var template = document.getElementById('cart-items-template').innerHTML;
-    var rendered = Mustache.render(template, {empty_msg: empty_msg, total: (total/100).toFixed(2), items: items, discount: localStorage.getItem("discountCode")}, {}, [ '<%', '%>' ]);
+    var rendered = Mustache.render(template, {email: localStorage.getItem("email"), empty_msg: empty_msg, total: (total/100).toFixed(2), items: items, discount: localStorage.getItem("discountCode")}, {}, [ '<%', '%>' ]);
     
     $cartTable.html(rendered);  
     
@@ -133,7 +133,7 @@ function populateCart()
         populateCart();
     });
     
-    $("#cart-email").on('change', function () {
+    $("#cart-email").on('input', function () {
         localStorage.setItem("email", $(this).val());
     });
     
@@ -152,6 +152,9 @@ function populateCart()
             alert ("You must enter a discount code in the box");
             return;
         }
+        
+        var button = $(this);
+        $(this).prop("disabled", true);
         
         var mysteries = cartLS.list().map(item => {
             newitem = {}
@@ -185,10 +188,13 @@ function populateCart()
                 }
                 else
                 {
+                    button.prop("disabled", false);
                     alert (result.error);
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
+                button.prop("disabled", false);
+                
                 alert ("Unable to contact server to validate discount code.  Try again in a while, if the problem persists go to our support page and contact us.");
             }
         });
@@ -202,6 +208,9 @@ function populateCart()
             alert ("You must enter the email of your Detectives Guild account");
             return;
         }
+        
+        var button = $(this);
+        $(this).prop("disabled", true);
         
         var discount = $("#my-cart-discount").val();
         
@@ -234,6 +243,8 @@ function populateCart()
                     localStorage.removeItem("discountCode");
                     localStorage.removeItem("discountedTotal");        
                     
+                    button.prop("disabled", false);
+                    
                     if (result.id)
                     {
                         // If there's a Stripe session, then
@@ -246,10 +257,14 @@ function populateCart()
                 }
                 else
                 {
+                    button.prop("disabled", false);
+                
                     alert (result.error);
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
+                button.prop("disabled", false);
+            
                 alert ("Unable to contact server to submit the order.  Try again in a while, if the problem persists go to our support page and contact us.");
             }
         });
