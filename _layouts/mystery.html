@@ -27,12 +27,18 @@ Categories
       <button class="btn btn-danger add-to-cart" data-id="{{this.mystery_id}}" data-name="{{this.title}}" data-price="{{this.price}}">Add to Cart</button>
     </div>
     
+    {% if this.testimonials %}
     <div>
     <h2>Customer Testimonials</h2>
+    {% for item in this.testimonials %}
     <div>
-    My daughter loves your mysteries and can't wait for the next one!
+    <h3>{{item.name}}</h3>
+    {{item.comment}}
     </div>
+    {% endfor %}    
     </div>
+    {% endif %}
+    
 </main>
 
 {% endblock %}

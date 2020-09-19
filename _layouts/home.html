@@ -24,6 +24,17 @@
     </div>
     {% endblock %}
 
+    {% if this.testimonials %}
+    <div>
+    <h2>Customer Testimonials</h2>
+    {% for item in this.testimonials %}
+    <div>
+    <h3>{{item.name}}</h3>
+    {{item.comment}}
+    </div>
+    {% endfor %}    
+    </div>
+    {% endif %}
 
 {% include 'footer.html' %}
 

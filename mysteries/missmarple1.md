@@ -16,5 +16,10 @@ categories:
 series:
     id: intro
     order: 2    
+testimonials:
+    - name: Cynthia from Ohio
+      comment: My daughter loves this mystery, and she can't wait for more adventures of Miss Marple!
+    - name: Roger from Toledo
+      comment: My son had trouble with the cipher, but loved the math puzzle.  Do more of those, please.
 ---
 

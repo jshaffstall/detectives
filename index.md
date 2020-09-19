@@ -6,8 +6,10 @@ content:
     - mysteries
     - ref: account-app
     - ref: support
-tagline:
-    The perfect gift for the detective in your life!
+tagline: The perfect gift for the detective in your life!
+testimonials:
+    - name: Cynthia from Ohio
+      comment: Our whole family loves your mysteries!
 ---
 ## What Is This?
 
