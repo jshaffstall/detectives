@@ -165,8 +165,10 @@ function populateCart()
             return newitem;
         });        
         
+        var email = $("#cart-email").val();
+        
         // Ask the server what sort of discount applies
-        order_item = {mysteries: mysteries, discount: discount}
+        order_item = {mysteries: mysteries, discount: discount, email: email}
     
         $.ajax({
             url: serverUrl+"order/total",
