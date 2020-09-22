@@ -1,7 +1,7 @@
 ---
 title: Nancy Drew's Deliberations
 description: Nancy Drew must deliberate to locate her father
-mystery_id: ea7e6b4d-1445-4416-b588-36e0de187e7c
+mystery_id: e0ab9e0e-1e15-4e76-94fd-ee9752ae2aaa
 author: jay
 price: 1500
 thumbnail: 
