@@ -256,6 +256,12 @@ function populateCart()
                             alert("Problem with checkout: " + result.error.message + ".  Please contact support if this error persists");
                         });
                     }
+                    else
+                    {
+                        // If there's no Stripe session, go 
+                        // straight to the order success page
+                        window.location.href="/order_successful.html";
+                    }
                 }
                 else
                 {
