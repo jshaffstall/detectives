@@ -72,14 +72,24 @@
   <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md fixed-top">
-        <a class="navbar-brand" href="/">Detectives Guild</a>
+    <nav class="navbar navbar-expand-md fixed-top navbar-light" >
+    <div class="container">
+        <a style="border=1px" class="navbar-brand" href="/">Detectives Guild</a>
         
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button style="margin-right: 25px" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          
+            <div class="mr-auto" style="float:right; position: absolute; right: 10px; top: 9px;">
+            <span class="btn btn-info" id="cart">
+            <span class="fa fa-shopping-cart"></span>
+            Cart
+            <span class="badge my-cart-badge btn-success"></span>
+            </span>
+            </div>
+          
 
-        <div class="navbar-collapse collapse">
+        <div style="margin-right: 35px" class="navbar-collapse collapse" id="navbarSupportedContent">
 
         <ul class="navbar-nav mr-auto">
             <li  class="nav-item active"><a class="nav-link" href="/about.html">About Us</a></li>
@@ -97,17 +107,10 @@
           </form>          
           
           </li>
-            <li>
-            <span class="btn btn-info" id="cart">
-            <span class="fa fa-shopping-cart"></span>
-            Cart
-            <span class="badge my-cart-badge btn-success"></span>
-            </span>
-            </li>
-            
           </ul>
-
+          
         </div><!--/.nav-collapse -->
+      </div>
       </div>
     </nav>
 
