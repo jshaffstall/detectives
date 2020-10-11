@@ -1,5 +1,8 @@
 from .hooks import data
 
+def tostring(value):
+    return repr(value)
+
 def dateformat(value, format="%d-%b-%Y"):
     return value.strftime(format)
 
@@ -33,7 +36,7 @@ def mysteries(value, which):
 
 # The value passed in should be a series slug
 # Mysteries will be returned in series order
-def series(value):
+def series_items(value):
     if value == '*':
         return data['series']
     
@@ -44,6 +47,15 @@ def series(value):
             return data['series'][series]
         
     return []
+
+# The value passed in should be a series slug
+# The series object will be returned
+def series(value):
+    for series in data['series_objects']:
+        if series == value:
+            return data['series_objects'][series]
+        
+    return {}
 
 # The value passed in should be an author slug
 def author(value):
@@ -64,11 +76,13 @@ def category(value):
 filters = {}
 filters['dateformat'] = dateformat
 filters['mysteries'] = mysteries
-filters['series'] = series
+filters['series_items'] = series_items
 filters['author'] = author
+filters['series'] = series
 filters['category'] = category
 filters['priceformat'] = priceformat
+filters['tostring'] = tostring
 
 def _series_order(item):
-    return item['series']['order']
+    return item['series_order']
     
