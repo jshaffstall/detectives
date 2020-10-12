@@ -46,6 +46,21 @@
                   {% endfor %}
 	              </ul>
 	            </div>
+                
+    {% if this.testimonials %}
+	            <div class="sidebar-box ftco-animate">
+	            	<h3 class="sidebar-heading">Testimonials</h3>
+	              <ul class="categories">
+                  {% for item in this.testimonials %}
+	                <li><div>
+    <h4>{{item.name}}</h4>
+    {{item.comment}}
+    </div></li>
+                  {% endfor %}
+	              </ul>
+	            </div>
+                {% endif %}
+                
 	          </div><!-- END COL -->
 
   </div>
