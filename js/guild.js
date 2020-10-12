@@ -5,7 +5,7 @@ $(document).ready(function()
 {
     $('.add-to-cart').on('click', function () {
         var cart = $('#cart');
-        var imgtodrag = $(this).parent('.item').find("img").eq(0);
+        var imgtodrag = $(this).parents('.item').find("img").eq(0);
         var data = this.dataset;
         
         if (imgtodrag) {

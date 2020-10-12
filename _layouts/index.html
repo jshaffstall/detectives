@@ -9,12 +9,14 @@
       {% for item in this.content %}
 			    			<div class="col-md-12">
 									<div class="blog-entry ftco-animate d-md-flex">
+                                    <div class="item">
                                     <div>
-                                    <div>
-										<a href="{{item.url}}" class="img img-2" style="background-image: url({{ url_prefix + '/images/'}}{{item.thumbnail_image }});"></a>
+										<a href="{{item.url}}" >
+                                        <img class="img img-2" src="{{ url_prefix + '/images/'}}{{item.thumbnail_image }}" alt="{{ item.thumbnail_alt }}" title="{{ item.thumbnail_tooltip }}">
+                                        </a>
                                     </div>
                                     <div style="text-align:center; padding-top:5px">
-                                        <input type="button" value="Buy me">
+                                        <button data-id="{{item.mystery_id}}" data-name="{{item.title}}" data-price="{{item.price}}" class="btn btn-info add-to-cart">Add To Cart</button>
                                     </div>
                                     </div>
 										<div class="text text-2 pl-md-4">
