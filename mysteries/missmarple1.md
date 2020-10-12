@@ -21,3 +21,8 @@ testimonials:
       comment: My son had trouble with the cipher, but loved the math puzzle.  Do more of those, please.
 ---
 
+This mystery starts off with Miss Marple relaxing at home.  
+
+Then she receives a mysterious letter from an anonymous source.  Can you help her decipher the riddles and follow the clues to find who sent it before time runs out?
+
+Miss Marple is counting on you!

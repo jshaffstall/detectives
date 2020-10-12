@@ -25,6 +25,7 @@
 												<p class="meta">
 				              		<span>Author: <a href="{{(item.author | author).url}}">{{(item.author | author).name}}</a></span>
 				              		<span>Series: <a href="{{(item.series_id | series).url}}">{{(item.series_id | series).title}}</a></span>
+                                    <span>Price: <span class="price">{{item.price | priceformat}}</span></span>
 				              	</p>
 			              	</div>
 				              <p class="mb-4">{{item.description}}</p>

@@ -140,6 +140,8 @@ h3[id]:before{
         color: #bfbfbf; }
         .blog-entry .text .meta-wrap .meta span a {
           color: #000000; }
+        .blog-entry .text .meta-wrap .meta span .price {
+          color: #000000; }
           
 .img{
   background-size: cover;

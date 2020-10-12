@@ -1,45 +1,57 @@
-{% extends "page.html" %}
+{% extends "_base.html" %}
 
-{% block sidebar %}
-{% endblock %}
+{% block body %}
 
-{% block content %}
 
-<main>
-<h2>{{ this.description }}</h2>
-<h2><a href="{{ url_prefix + '/authors/' + this.author + '.html'}}">Author: {{ (this.author | author).name }}</a></h2>
-<h2>
-
-Categories
-
-{% for item in this.categories %}
-{% set category = item | category %}
-<h3><a href="{{category.url}}">{{category.title}}</a></h3>
-{% endfor %}
-
-</h2>
-
-    <div class="col-md-3 text-center item">
-      <img src="{{ url_prefix + '/images/' + this.thumbnail_image }}" alt="{{ this.thumbnail_alt }}" title="{{ this.thumbnail_tooltip }}">
-      <br>
-      {{this.title}} - <strong>{{this.price | priceformat}}</strong>
-      <br>
-      <button class="btn btn-danger add-to-cart" data-id="{{this.mystery_id}}" data-name="{{this.title}}" data-price="{{this.price}}">Add to Cart</button>
-    </div>
+<div class="container">
+  <div class="row d-flex">
+    <div class="col-xs-12 col-md-8">
     
-    {% if this.testimonials %}
+									<div class="blog-entry ftco-animate d-md-flex">
+                                    <div class="item">
+                                    <div>
+										<a href="{{this.url}}" >
+                                        <img class="img img-2" src="{{ url_prefix + '/images/'}}{{this.thumbnail_image }}" alt="{{ this.thumbnail_alt }}" title="{{ this.thumbnail_tooltip }}">
+                                        </a>
+                                    </div>
+                                    <div style="text-align:center; padding-top:5px">
+                                        <button data-id="{{this.mystery_id}}" data-name="{{this.title}}" data-price="{{this.price}}" class="btn btn-info add-to-cart">Add To Cart</button>
+                                    </div>
+                                    </div>
+										<div class="text text-2 pl-md-4">
+				              <h3 class="mb-2"><a href="{{this.url}}">{{this.title}}</a></h3>
+				              <div class="meta-wrap">
+												<p class="meta">
+				              		<span>Author: <a href="{{(this.author | author).url}}">{{(this.author | author).name}}</a></span>
+				              		<span>Series: <a href="{{(this.series_id | series).url}}">{{(this.series_id | series).title}}</a></span>
+                                    <span>Price: <span class="price">{{this.price | priceformat}}</span></span>
+				              	</p>
+			              	</div>
+				              <p class="mb-4">{{this.description}}</p>
+				            </div>
+									</div>
     <div>
-    <h2>Customer Testimonials</h2>
-    {% for item in this.testimonials %}
-    <div>
-    <h3>{{item.name}}</h3>
-    {{item.comment}}
+    {{this.body}}
     </div>
-    {% endfor %}    
     </div>
-    {% endif %}
+
     
-</main>
+  	    			<div class="col-md-4 sidebar ftco-animate bg-light pt-5">
+	          
+	            <div class="sidebar-box ftco-animate">
+	            	<h3 class="sidebar-heading">Categories</h3>
+	              <ul class="categories">
+                  {% for item in this.categories %}
+	                <li><a href="{{(item | category).url}}">{{(item | category).title}}</a></li>
+                  {% endfor %}
+	              </ul>
+	            </div>
+	          </div><!-- END COL -->
+
+  </div>
+  
+    {% include 'footer.html' %}
+    
+</div>
 
 {% endblock %}
-
