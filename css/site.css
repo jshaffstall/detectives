@@ -1239,5 +1239,16 @@ col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, 
   padding-right: 15px;
   padding-left: 15px; }
 
+.align-self-stretch {
+  -ms-flex-item-align: stretch !important;
+  -ms-grid-row-align: stretch !important;
+  align-self: stretch !important; }
   
+img {
+  vertical-align: middle;
+  border-style: none; }
 
+.align-items-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important; }
