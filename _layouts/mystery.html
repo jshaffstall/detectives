@@ -7,29 +7,8 @@
   <div class="row d-flex">
     <div class="col-xs-12 col-md-8">
     <main>
-									<div class="blog-entry ftco-animate d-md-flex">
-                                    <div class="item">
-                                    <div>
-										<a href="{{this.url}}" >
-                                        <img class="img img-2" src="{{ url_prefix + '/images/'}}{{this.thumbnail_image }}" alt="{{ this.thumbnail_alt }}" title="{{ this.thumbnail_tooltip }}">
-                                        </a>
-                                    </div>
-                                    <div style="text-align:center; padding-top:5px">
-                                        <button data-id="{{this.mystery_id}}" data-name="{{this.title}}" data-price="{{this.price}}" class="btn btn-info add-to-cart">Add To Cart</button>
-                                    </div>
-                                    </div>
-										<div class="text text-2 pl-md-4">
-				              <h3 class="mb-2"><a href="{{this.url}}">{{this.title}}</a></h3>
-				              <div class="meta-wrap">
-												<p class="meta">
-				              		<span>Author: <a href="{{(this.author | author).url}}">{{(this.author | author).name}}</a></span>
-				              		<span>Series: <a href="{{(this.series_id | series).url}}">{{(this.series_id | series).title}}</a></span>
-                                    <span>Price: <span class="price">{{this.price | priceformat}}</span></span>
-				              	</p>
-			              	</div>
-				              <p class="mb-4">{{this.description}}</p>
-				            </div>
-									</div>
+    {% set item = this %}
+    {% include "mystery_item.html" %}
     <div class="col-xs-12 col-md-12">
     {{this.body}}
     </div>

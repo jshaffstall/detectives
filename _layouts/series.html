@@ -12,31 +12,7 @@
 </main>
     <br>
       {% for item in this.components[-1] | series_items %}
-									<div class="blog-entry ftco-animate d-md-flex">
-                                    <div class="item">
-                                    <div>
-										<a href="{{item.url}}" >
-                                        <img class="img img-2" src="{{ url_prefix + '/images/'}}{{item.thumbnail_image }}" alt="{{ item.thumbnail_alt }}" title="{{ item.thumbnail_tooltip }}">
-                                        </a>
-                                    </div>
-                                    <div style="text-align:center; padding-top:5px">
-                                        <button data-id="{{item.mystery_id}}" data-name="{{item.title}}" data-price="{{item.price}}" class="btn btn-info add-to-cart">Add To Cart</button>
-                                    </div>
-                                    </div>
-										<div class="text text-2 pl-md-4">
-				              <h3 class="mb-2"><a href="{{item.url}}">{{item.title}}</a></h3>
-				              <div class="meta-wrap">
-												<p class="meta">
-				              		<span>Author: <a href="{{(item.author | author).url}}">{{(item.author | author).name}}</a></span>
-				              		<span>Series: <a href="{{(item.series_id | series).url}}">{{(item.series_id | series).title}}</a></span>
-                                    <span>Price: <span class="price">{{item.price | priceformat}}</span></span>
-				              	</p>
-			              	</div>
-				              <p class="mb-4">{{item.description}}</p>
-				              <p><a href="{{item.url}}" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
-				            </div>
-									</div>
-
+      {% include "mystery_item.html" %}
       {% endfor %}
     </div>
     
