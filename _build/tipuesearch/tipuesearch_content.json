@@ -80,13 +80,19 @@
         },
         {
             "tags": "",
+            "text": "A choose your own style mystery has branching paths based on Detective choices. Traditional Choose Your Own mysteries take the Detective through a series of choices that can lead to wildly different endings depending on choices made during the mystery. Mysteries in this category can range from full-blown choose your own mysteries with many endings, to more mild use of branching scenes.",
+            "title": "Choose Your Own",
+            "url": "/categories/choose-your-own.html"
+        },
+        {
+            "tags": "",
             "text": "",
             "title": "All the categories",
             "url": "/categories/index.html"
         },
         {
             "tags": "",
-            "text": "A narrative mystery has a strong element of story and plot",
+            "text": "A narrative mystery has a strong element of story and plot. A Narrative mystery typically has a significant amount of reading involved and involves a strong sense of story and plot. Picture a narrative mystery as being like reading a novella, while a typical mystery would be more like a short story.",
             "title": "Narrative",
             "url": "/categories/narrative.html"
         },
@@ -101,6 +107,12 @@
             "text": "A short mystery is one that is only a handful of stages long",
             "title": "Short",
             "url": "/categories/short.html"
+        },
+        {
+            "tags": "",
+            "text": "Time loops mysteries have Detectives repeating the same sequence of events over and over. Typically in a time loop Detectives will experience the same events multiple times.  Each time through the loop they'll have the opportunity to learn something that can change what options they have on the next time through the loop. Only by going through the loop multple times can they work out what's causing it and stop the loop.",
+            "title": "Time Loop",
+            "url": "/categories/time-loop.html"
         },
         {
             "tags": "",
@@ -125,6 +137,12 @@
             "text": "Add To Cart Miss Marple's Meanderings Author: Jay Series: Test Series Price: $15.00 Miss Marple has to wander to find a mysterious contact. Can she solve the mystery before it's too late? This mystery starts off with Miss Marple relaxing at home. Then she receives a mysterious letter from an anonymous source.  Can you help her decipher the riddles and follow the clues to find who sent it before time runs out? Miss Marple is counting on you!",
             "title": "Miss Marple's Meanderings",
             "url": "/mysteries/missmarple1.html"
+        },
+        {
+            "tags": "",
+            "text": "Add To Cart Mondays At Miskatonic Author: Jay Series: Price: $15.00 A time loop has started on the strangest college campus ever.  Can you figure out what's causing it and escape Mondays at Miskatonic University? This mystery takes place on the campus of Miskatonic University. This version of Miskatonic University is lighter than that depicted in HP Lovecraft's stories, but still offers classes in such diverse topics as Tissue Reanimation, Applied Mythology, Esoteric Studies, and more. When a visiting high school student finds themselves repeating the worst of all days, Monday, can they figure out what's causing it and escape?",
+            "title": "Mondays At Miskatonic",
+            "url": "/mysteries/mondays_at_miskatonic.html"
         },
         {
             "tags": "",
