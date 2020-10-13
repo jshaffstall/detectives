@@ -8,7 +8,7 @@
         },
         {
             "tags": "",
-            "text": "What Is The Detective's Guild? The Detectives Guild provides interactive mysteries you can give as gifts to the Detectives in your life, including you! Our mysteries are played entirely online with no registration required for the Detectives themselves. When you purchase a mystery you provide a name for them to be known by in the mystery (that doesn't need to be their real name). The only other information we collect during the mystery are their answers to each stage. Some mysteries will involve solving ciphers and riddles, while others will involve playing through a branching story. Our mysteries span age ranges and skill levels, from the youngest beginning sleuths to the most mature Detectives. Browse our mysteries by specific Category or Series with the links to the right, or click The Mysteries in the navigation to see a comprehensive list.",
+            "text": "What Is The Detective's Guild? The Detectives Guild provides interactive mysteries you can give as gifts to the Detectives in your life, including you! Our mysteries are played entirely online with no registration required for the Detectives themselves. When you purchase a mystery you provide a name for them to be known by in the mystery (that doesn't need to be their real name). The only other information we collect during the mystery are their answers for each scene. Some mysteries will involve solving ciphers and riddles, while others will involve playing through a branching story. Our mysteries span age ranges and skill levels, from the youngest beginning sleuths to the most mature Detectives. Each scene has hints available so any Detectives that get stuck figuring out the right answer can get help. Browse our mysteries by specific Category or Series with the links to the right, or click The Mysteries in the navigation to see a comprehensive list.",
             "title": "Detective's Guild",
             "url": "/index.html"
         },
@@ -68,13 +68,13 @@
         },
         {
             "tags": "",
-            "text": "This category involves basic math such as addition and subtraction",
+            "text": "This category involves basic math Mysteries that use basic math will involve riddles or puzzles that require basic math on small numbers.  Here's an example: You must wait until the correct hour and then see where the shadow falls.  The hour that is right is half of 2 added to 8.",
             "title": "Basic Math",
             "url": "/categories/basic-math.html"
         },
         {
             "tags": "",
-            "text": "A Caesar Cipher is a way of encoding text by rotating letters throughout the alphabet.  The following mysteries use puzzles that involve understanding how a Caesar Cipher works.",
+            "text": "A Caesar Cipher is a way of encoding text by rotating letters throughout the alphabet. Typical mysteries that involve Caesar Ciphers will give the Detective encoded text, and some clue as to how far to shift each letter.  Here's an example: Please forgive this mysterious way of contacting you, but this is a matter of the utmost urgency and secrecy.  You must locate me before something disastrous happens!  To find out where you must go, there is little you must know.  I can give you this rhyming clue, letters you must shift by ? The Detective would then be given the nonsense letters RCTM. To decode this they'd have to recgonize it as a Caesar Cipher, and then realize that the only number that rhymes with clue is two, and then shift the letters backwards by two.  The R becomes P, the C becomes A, the T becomes R, and the M becomes K.  So the decoded word is PARK.",
             "title": "Caesar Cipher",
             "url": "/categories/caesar-cipher.html"
         },
@@ -98,13 +98,13 @@
         },
         {
             "tags": "",
-            "text": "This sort of mystery involves reading the text closely to understand the concepts presented",
+            "text": "This sort of mystery involves reading the text closely to understand the concepts presented Mysteries that feature reading comprehension as a mechanic will typically present a scene and then ask a question about the scene.  Understanding what is being described is a critical part of being able to answer the question.",
             "title": "Reading Comprehension",
             "url": "/categories/reading-comprehension.html"
         },
         {
             "tags": "",
-            "text": "A short mystery is one that is only a handful of stages long",
+            "text": "A short mystery is one that is only a handful of scenes long Short mysteries are typically ones that can be finished in a single sitting, unless time is needed to work through a particularly tricky puzzle or riddle.",
             "title": "Short",
             "url": "/categories/short.html"
         },
