@@ -1,0 +1,8 @@
+<div class="sidebar-box ftco-animate">
+    <h3 class="sidebar-heading">Series</h3>
+  <ul class="categories">
+  {% for item in ('*' | series) %}
+    <li><a href="{{(item | series).url}}">{{(item | series).title}}</a></li>
+  {% endfor %}
+  </ul>
+</div>
