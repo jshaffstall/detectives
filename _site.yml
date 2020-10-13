@@ -7,10 +7,4 @@ baseurl:
 # google_analytics: UA-
 
 
-reflinks:
-    account-app:
-        url: https://app.detectivesguild.com/#account
-        title: My Account
-    support:
-        url: https://detectives-guild.freshdesk.com/
-        title: Contact Support
+

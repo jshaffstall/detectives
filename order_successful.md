@@ -2,7 +2,7 @@
 title: Order Successful!
 layout: page 
 ---
-## You've Bought Your Order, What Next?
+### You've Bought Your Order, What Next?
 
 Each mystery you bought will need to be assigned to a Detective so that we can email them instructions on how to play it.  You can assign Detectives  by going to the My Account link at the top of the page.  
 

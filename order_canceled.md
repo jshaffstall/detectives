@@ -2,7 +2,7 @@
 title: Order Canceled
 layout: page 
 ---
-## You Didn't Finish Paying For Your Order
+### You Didn't Finish Paying For Your Order
 
 If you changed your mind about the order, no problem!  If at some point you decide you want to complete the order, click the My Account link at the top of the page.  
 
