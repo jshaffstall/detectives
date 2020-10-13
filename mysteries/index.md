@@ -1,5 +1,5 @@
 ---
-title: All the mysteries
+title: The Mysteries
 layout: index
 order: title
 ---
