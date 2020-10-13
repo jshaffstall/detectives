@@ -16,26 +16,15 @@
       {% endfor %}
     </div>
     
-  	    			<div class="col-md-4 sidebar ftco-animate bg-light pt-5">
+    <div class="col-md-4 sidebar ftco-animate bg-light pt-5">
 	          
-	            <div class="sidebar-box ftco-animate">
-	            	<h3 class="sidebar-heading">Series</h3>
-	              <ul class="categories">
-                  {% for item in ('*' | series) %}
-	                <li><a href="{{(item | series).url}}">{{(item | series).title}}</a></li>
-                  {% endfor %}
-	              </ul>
-	            </div>
-
-	            <div class="sidebar-box ftco-animate">
-	            	<h3 class="sidebar-heading">Categories</h3>
-	              <ul class="categories">
-                  {% for item in ('*' | category) %}
-	                <li><a href="{{(item | category).url}}">{{(item | category).title}}</a></li>
-                  {% endfor %}
-	              </ul>
-	            </div>
-	          </div><!-- END COL -->
+      {% include "sidebar_series.html" %}
+      {% set categories=('*' | category) %}
+      {% include "sidebar_categories.html" %}
+      {% include "sidebar_authors.html" %}
+      {% include "sidebar_testimonials.html" %} 
+                
+    </div><!-- END COL -->
 
   </div>
   

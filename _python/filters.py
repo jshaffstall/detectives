@@ -61,6 +61,9 @@ def series(value):
 
 # The value passed in should be an author slug
 def author(value):
+    if value == '*':
+        return data['authors']
+    
     for author in data['authors']:
         if author == value:
             return data['authors'][author]['author']
