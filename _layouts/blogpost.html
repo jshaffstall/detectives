@@ -2,7 +2,6 @@
 
 {% block body %}
 
-
 <div class="container">
   <div class="row d-flex">
     <div class="col-xs-12 col-md-8 blog-entry ">
@@ -18,12 +17,12 @@
     </div>
 
     
-	<div class="col-md-4 sidebar ftco-animate bg-light pt-5">
-	          
-      {% set categories=this.categories %}
+    <div class="col-md-4 sidebar ftco-animate bg-light pt-5">
+      {% include "sidebar_series.html" %}
+      {% set categories=('*' | category) %}
       {% include "sidebar_categories.html" %}
-      {% include "sidebar_testimonials.html" %}                 
-            
+      {% include "sidebar_authors.html" %}          
+	  {% include "sidebar_discord.html" %}        
     </div><!-- END COL -->
 
   </div>

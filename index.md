@@ -4,6 +4,7 @@ layout: home
 content:
     - about
     - mysteries
+    - news
     - myaccount
     - support
 tagline: The perfect gift for the detective in your life!

@@ -3,6 +3,7 @@ title: Welcome to Detectives Guild!
 layout: blogpost
 date: 2020-10-15
 author: jay
+hidden: true
 description: The obligatory first post welcoming you to the site.  If you're interested in being a beta-tester, read this.
 ---
 

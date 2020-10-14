@@ -3,11 +3,12 @@
 {% block body %}
 
 
+
 <div class="container">
   <div class="row d-flex">
     <div class="col-xs-12 col-md-8">
-    
-      {% for item in this.content %}
+      
+      {% for item in this.content[:6] %}
         {% include "blogsnippet.html" %}
       {% endfor %}
     </div>
@@ -17,7 +18,8 @@
       {% include "sidebar_series.html" %}
       {% set categories=('*' | category) %}
       {% include "sidebar_categories.html" %}
-      {% include "sidebar_authors.html" %}          
+      {% include "sidebar_authors.html" %}   
+	  {% include "sidebar_discord.html" %}        
     </div><!-- END COL -->
 
   </div>

@@ -1,0 +1,8 @@
+<div class="sidebar-box ftco-animate">
+    <h3 class="sidebar-heading">Authors</h3>
+  <ul class="categories">
+  {% for item in '*' | author %}
+    <li><a href="{{(item | author).url}}">{{(item | author).name}}</a></li>
+  {% endfor %}
+  </ul>
+</div>
