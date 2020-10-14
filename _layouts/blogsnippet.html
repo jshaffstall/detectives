@@ -1,0 +1,21 @@
+<div class="blog-entry ftco-animate d-md-flex">
+<div class="item">
+{% if item.thumbnail_image %}
+<div>
+    <a href="{{item.url}}" >
+    <img class="img img-2" src="{{ url_prefix + '/images/'}}{{item.thumbnail_image }}" alt="{{ item.thumbnail_alt }}" title="{{ item.thumbnail_tooltip }}">
+    </a>
+</div>
+{% endif %}
+</div>
+    <div class="text text-2 pl-md-4">
+<h3 class="mb-2"><a href="{{item.url}}">{{item.title}}</a></h3>
+<div class="meta-wrap">
+            <p class="meta">
+<span>Date: {{item.date}}</span>
+</p>
+</div>
+<p class="mb-4">{{item.description}}</p>
+<p><a href="{{item.url}}" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+</div>
+</div>

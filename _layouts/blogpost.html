@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+
+{% block body %}
+
+
+<div class="container">
+  <div class="row d-flex">
+    <div class="col-xs-12 col-md-8 blog-entry ">
+    <div class="text text-2 pl-md-4">
+    <h3 class="mb-2">{{ this.title }}</h3>
+    <p class="meta">
+    <span class="text text-2 pl-md-4 mb-2">Posted: {{ this.date }}</span>
+    </p>
+    </div>
+<main>
+    <div class="text text-2 pl-md-4 mb-2">{{this.body}}</div>
+</main>
+    </div>
+
+    
+	<div class="col-md-4 sidebar ftco-animate bg-light pt-5">
+	          
+      {% set categories=this.categories %}
+      {% include "sidebar_categories.html" %}
+      {% include "sidebar_testimonials.html" %}                 
+            
+    </div><!-- END COL -->
+
+  </div>
+  
+    {% include 'footer.html' %}
+    
+</div>
+
+{% endblock %}

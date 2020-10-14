@@ -1,6 +1,6 @@
 ---
 title: Blog 
-layout: index
+layout: blogindex
 order: date
 reverse: true
 ---
