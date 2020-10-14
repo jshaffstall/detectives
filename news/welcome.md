@@ -13,6 +13,6 @@ Everything is in test mode, including purchasing mysteries.  If you're a beta-te
 
 If you're not a beta-tester, but want to be, join our Discord server and request access.  Be sure to let us know how you found the site, since we're not advertising it yet.
 
-We're super excited about the beta-test launch.  Detectives Guild has been a multi-year labor of love to try to provide virtual mysteries to Detectives of all ages.  
+We're super excited about the beta-test launch.  Detectives Guild has been a multi-year labor of love to provide virtual mysteries to Detectives of all ages.  
 
 Thanks for joining us!
