@@ -2,6 +2,7 @@ brand: Detectives Guild
 
 bootswatch: null # flatly, yeti, lumen,...
 baseurl: 
+hostname: https://detectivesguild.com
 
 # Fill out your Google Analytics ID here
 # google_analytics: UA-

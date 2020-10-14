@@ -1,6 +1,7 @@
 ---
 title: Order Canceled
 layout: page 
+hidden: true
 ---
 ### You Didn't Finish Paying For Your Order
 

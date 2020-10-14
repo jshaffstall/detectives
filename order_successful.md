@@ -1,6 +1,7 @@
 ---
 title: Order Successful!
 layout: page 
+hidden: true
 ---
 ### You've Bought Your Order, What Next?
 
