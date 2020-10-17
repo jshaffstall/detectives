@@ -2,6 +2,8 @@
 title: Choose Your Own
 layout: category 
 description: A choose your own style mystery has branching paths based on Detective choices.
+items_per_page: 5
+items_filter: mysteries choose-your-own categories
 ---
 Traditional Choose Your Own mysteries take the Detective through a series of choices that can lead to wildly different endings depending on choices made during the mystery.
 

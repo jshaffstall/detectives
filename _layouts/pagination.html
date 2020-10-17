@@ -1,0 +1,19 @@
+      {% if this.numpages %}
+			            <div class="block-27">
+			              <ul>
+      {% if this.prevpage %}
+			                <li><a href="{{this.prevpage.url}}">&lt;</a></li>
+      {% endif %}
+      {% for page in this.pages %}
+      {% if page.pagenum == this.thispage %}
+			                <li class="active"><span>{{page.pagenum}}</span></li>
+      {% else %}
+			                <li><a href="{{page.page.url}}">{{page.pagenum}}</a></li>
+      {% endif %}
+      {% endfor %}
+      {% if this.nextpage %}
+			                <li><a href="{{this.nextpage.url}}">&gt;</a></li>
+      {% endif %}
+			              </ul>
+			            </div>
+      {% endif %}

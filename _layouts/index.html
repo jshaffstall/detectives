@@ -2,7 +2,6 @@
 
 {% block body %}
 
-
 <div class="container">
   <div class="row d-flex">
     <div class="col-xs-12 col-md-8">
@@ -10,6 +9,8 @@
       {% for item in this.content %}
         {% include "mystery_item.html" %}
       {% endfor %}
+      
+      {% include "pagination.html" %}
     </div>
     
     {% include "sidebar_general.html" %}

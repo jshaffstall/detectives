@@ -2,6 +2,8 @@
 title: Caesar Cipher
 layout: category 
 description: A Caesar Cipher is a way of encoding text by rotating letters throughout the alphabet.  
+items_per_page: 5
+items_filter: mysteries caesar-cipher categories
 ---
 
 Typical mysteries that involve Caesar Ciphers will give the Detective encoded text, and some clue as to how far to shift each letter.  Here's an example:

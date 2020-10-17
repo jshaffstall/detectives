@@ -15,7 +15,7 @@
             <p class="meta">
 <span>Author: <a href="{{(item.author | author).url}}">{{(item.author | author).name}}</a></span>
 {% if item.series_id %}
-<span>Series: <a href="{{(item.series_id | series).url}}">{{(item.series_id | series).title}}</a></span>
+<span>Series: <a href="{{(item.series_id | series).url}}">{{(item.series_id | series).title}} #{{item.series_order}}</a></span>
 {% endif %}
 <span>Price: <span class="price">{{item.price | priceformat}}</span></span>
 </p>

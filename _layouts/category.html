@@ -11,9 +11,12 @@
     <div class="text text-2 pl-md-4 mb-2">{{this.body}}</div>
 </main>
     <br>
-      {% for item in this.components[-1] | mysteries('categories') %}
+
+      {% for item in this.content %}
         {% include "mystery_item.html" %}
       {% endfor %}
+      
+    {% include "pagination.html" %}      
     </div>
     
 	<div class="col-md-4 sidebar ftco-animate bg-light pt-5">
