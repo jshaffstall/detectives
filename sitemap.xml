@@ -61,7 +61,17 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://detectivesguild.com/categories/second-person.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://detectivesguild.com/categories/short.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://detectivesguild.com/categories/third-person.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
