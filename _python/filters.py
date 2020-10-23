@@ -26,13 +26,19 @@ def mysteries(value, which):
     if which == 'categories':
         for category in data['categories']:
             if category == value:
-                return data['categories'][category]['mysteries']
+                if 'mysteries' in data['categories'][category]:
+                    return data['categories'][category]['mysteries']
+                
+                return []
 
     # The value passed in should be an author slug
     if which == 'author':
         for author in data['authors']:
             if author == value:
-                return data['authors'][author]['mysteries']
+                if 'mysteries' in data['authors'][author]:
+                    return data['authors'][author]['mysteries']
+                
+                return []
                     
     return []
 

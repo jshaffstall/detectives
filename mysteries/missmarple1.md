@@ -12,8 +12,7 @@ categories:
     - short
     - caesar-cipher
     - basic-math
-series_id: intro
-series_order: 1  
+    - free
 testimonials:
     - name: Cynthia from Ohio
       comment: My daughter loves this mystery, and she can't wait for more adventures of Miss Marple!
