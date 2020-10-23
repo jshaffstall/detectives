@@ -13,6 +13,7 @@ categories:
     - caesar-cipher
     - basic-math
     - free
+    - third-person
 testimonials:
     - name: Cynthia from Ohio
       comment: My daughter loves this mystery, and she can't wait for more adventures of Miss Marple!

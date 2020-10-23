@@ -12,6 +12,7 @@ categories:
     - choose-your-own
     - time-loop
     - narrative
+    - second-person
 ---
 
 This mystery takes place on the campus of Miskatonic University.
