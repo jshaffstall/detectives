@@ -101,6 +101,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://detectivesguild.com/mysteries/testmystery.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://detectivesguild.com/series/intro.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>

@@ -152,6 +152,12 @@
         },
         {
             "tags": "",
+            "text": "Add To Cart Test Mystery Author: Jay Price: $0.00 Used for testing specific features Read More This mystery is used to test specific features.  No real content here!",
+            "title": "Test Mystery",
+            "url": "/mysteries/testmystery.html"
+        },
+        {
+            "tags": "",
             "text": "",
             "title": "News",
             "url": "/news/index.html"
