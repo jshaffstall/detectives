@@ -56,6 +56,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://detectivesguild.com/categories/pronouns.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://detectivesguild.com/categories/reading-comprehension.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -91,17 +96,17 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://detectivesguild.com/mysteries/lightfingers1.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://detectivesguild.com/mysteries/missmarple1.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://detectivesguild.com/mysteries/mondays_at_miskatonic.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://detectivesguild.com/mysteries/testmystery.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
