@@ -8,6 +8,8 @@ thumbnail_image: lightfingers1.jpg
 thumbnail_alt: Lightfingers looks into an open safe to see the jewel
 thumbnail_tooltip: Lightfingers finding the jewel!
 layout: mystery 
+series_id: lightfingers
+series_order: 1
 categories:
     - pronouns
     - free
